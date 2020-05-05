@@ -1,0 +1,18 @@
+public class HANDLE_BORNE_2{
+  
+	public boolean guard_HANDLE_BORNE_2(Machine_Parking_Ferry machine) {
+		return (machine.get_Borne_2().equals(false) && !machine.get_Voie_arrive_2().apply(new Integer(0)).equals(machine.none) && (new Integer(machine.get_Etages().apply(new Integer(1)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))).compareTo(new Integer(3)) <= 0 && !machine.get_Voie_arrive_2().apply(new Integer(0)).equals(machine.voiture) || (new Integer(machine.get_Etages().apply(new Integer(2)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))).compareTo(new Integer(3)) <= 0 || (new Integer(machine.get_Etages().apply(new Integer(3)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))).compareTo(new Integer(3)) <= 0 && machine.get_Borne_1().equals(false) && machine.get_choose_target().apply(new Integer(machine.get_scoring_full_etage1().apply(new Integer(machine.get_Virtual_etages().apply(new Integer(1)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))) + machine.get_scoring_full_etage2().apply(new Integer(machine.get_Virtual_etages().apply(new Integer(2)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))) + machine.get_scoring_type_vehicule().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))).equals(new Integer(1)) || machine.get_choose_target().apply(new Integer(machine.get_scoring_full_etage1().apply(new Integer(machine.get_Virtual_etages().apply(new Integer(1)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))) + machine.get_scoring_full_etage2().apply(new Integer(machine.get_Virtual_etages().apply(new Integer(2)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))) + machine.get_scoring_type_vehicule().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))).equals(new Integer(2)) || machine.get_choose_target().apply(new Integer(machine.get_scoring_full_etage1().apply(new Integer(machine.get_Virtual_etages().apply(new Integer(1)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))) + machine.get_scoring_full_etage2().apply(new Integer(machine.get_Virtual_etages().apply(new Integer(2)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))) + machine.get_scoring_type_vehicule().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))).equals(new Integer(3)) && (new Integer(machine.get_Virtual_etages().apply(new Integer(3)) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(new Integer(0))))).compareTo(new Integer(6)) <= 0);
+	}
+
+	public void run_HANDLE_BORNE_2(Machine_Parking_Ferry machine){
+		if(guard_HANDLE_BORNE_2(machine)) {
+			Boolean Borne_2_tmp = machine.get_Borne_2();
+			Integer Temporary_target_2_tmp = machine.get_Temporary_target_2();
+			Boolean Barriere_voie2_tmp = machine.get_Barriere_voie2();
+			machine.set_Borne_2(true);
+			machine.set_Temporary_target_2(machine.get_choose_target().apply(new Integer(machine.get_scoring_full_etage1().apply(new Integer(machine.get_Virtual_etages().apply(1) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(0)))) + machine.get_scoring_full_etage2().apply(new Integer(machine.get_Virtual_etages().apply(2) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_2().apply(0)))) + machine.get_scoring_type_vehicule().apply(machine.get_Voie_arrive_2().apply(0)))));
+			machine.set_Barriere_voie2(true);
+			System.out.println("HANDLE_BORNE_2 executed ");
+		}
+	}
+}
