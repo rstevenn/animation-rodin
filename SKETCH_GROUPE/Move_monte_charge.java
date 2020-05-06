@@ -7,13 +7,6 @@ public class Move_monte_charge{
 	public void run_Move_monte_charge( Integer Value, Machine_Parking_Ferry machine){
     if(guard_Move_monte_charge(Value,machine)) {
 			Integer Monte_charge_etage_tmp = machine.get_Monte_charge_etage();
-			BRelation<Integer,Boolean> Barriere_monte_charge_tmp = machine.get_Barriere_monte_charge();
-			Boolean Barriere_acces_monte_charge_tmp = machine.get_Barriere_acces_monte_charge();
-			BRelation<Integer,Boolean> Barriere_etage_tmp = machine.get_Barriere_etage();
-			Boolean Capteur_arrive_tmp = machine.get_Capteur_arrive();
-			Boolean Capteur_monte_charge_1_tmp = machine.get_Capteur_monte_charge_1();
-			Boolean Capteur_monte_charge_2_tmp = machine.get_Capteur_monte_charge_2();
-			BRelation<Integer,Boolean> Capteur_etages_tmp = machine.get_Capteur_etages();
 			machine.set_Monte_charge_etage(Value);
 			machine.set_Barriere_monte_charge(new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(1,false),new Pair<Integer,Boolean>(2,false)));
 			machine.set_Barriere_acces_monte_charge(false);

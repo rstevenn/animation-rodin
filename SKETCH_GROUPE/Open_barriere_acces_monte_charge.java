@@ -6,7 +6,6 @@ public class Open_barriere_acces_monte_charge{
 
   public void run_Open_barriere_acces_monte_charge(Machine_Parking_Ferry machine){
 		if(guard_Open_barriere_acces_monte_charge(machine)) {
-			Boolean Barriere_acces_monte_charge_tmp = machine.get_Barriere_acces_monte_charge();
 			machine.set_Barriere_acces_monte_charge(true);
 			System.out.println("Open_barriere_acces_monte_charge executed ");
 		}

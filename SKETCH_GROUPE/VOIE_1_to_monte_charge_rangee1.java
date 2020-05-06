@@ -8,8 +8,6 @@ public class VOIE_1_to_monte_charge_rangee1{
 		if(guard_VOIE_1_to_monte_charge_rangee1(machine)) {
 			BRelation<Integer,Integer> Monte_charge_rangee1_tmp = machine.get_Monte_charge_rangee1();
 			BRelation<Integer,Integer> Voie_arrive_1_tmp = machine.get_Voie_arrive_1();
-			Boolean Barriere_voie1_tmp = machine.get_Barriere_voie1();
-			Boolean Borne_1_tmp = machine.get_Borne_1();
 			Integer Test_full_rangee1_tmp = machine.get_Test_full_rangee1();
 			Integer N_slot_full_rangee1_tmp = machine.get_N_slot_full_rangee1();
 			BRelation<Integer,Integer> target_etage_rangee1_tmp = machine.get_target_etage_rangee1();

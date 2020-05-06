@@ -6,9 +6,7 @@ public class HANDLE_BORNE_1{
 
 	public void run_HANDLE_BORNE_1(Machine_Parking_Ferry machine){
 		if(guard_HANDLE_BORNE_1(machine)) {
-			Boolean Borne_1_tmp = machine.get_Borne_1();
 			Integer Temporary_target_1_tmp = machine.get_Temporary_target_1();
-			Boolean Barriere_voie1_tmp = machine.get_Barriere_voie1();
 			machine.set_Borne_1(true);
 			machine.set_Temporary_target_1(machine.get_choose_target().apply(new Integer(machine.get_scoring_full_etage1().apply(new Integer(machine.get_Virtual_etages().apply(1) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_1().apply(0)))) + machine.get_scoring_full_etage2().apply(new Integer(machine.get_Virtual_etages().apply(2) + machine.get_value_vehicules().apply(machine.get_Voie_arrive_1().apply(0)))) + machine.get_scoring_type_vehicule().apply(machine.get_Voie_arrive_1().apply(0)))));
 			machine.set_Barriere_voie1(true);
