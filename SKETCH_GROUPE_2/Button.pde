@@ -7,6 +7,7 @@ class Button{
   int r;
   int g;
   int b;
+  int Event;
   boolean click;
   
   /*Construction of an object button.
@@ -21,7 +22,7 @@ class Button{
   newG: Green for RGB (integer).
   newB: Blue for RGB (integer).
   */
-  Button(int newX, int newY, int newWidth, int newHeight, String newText,int newR, int newG, int newB){
+  Button(int newX, int newY, int newWidth, int newHeight, String newText,int newR, int newG, int newB, int newEvent){
     x = newX;
     y = newY;
     width = newWidth;
@@ -30,18 +31,19 @@ class Button{
     r = newR;
     g = newG;
     b = newB;
+    Event = newEvent;
   }
 
-//Fonction to display button when it is on.
-  void display(){
-    fill(r,g,b); stroke(255); rectMode(CENTER); rect(x,y,width,height);
-    fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
-  }
- 
-//Fonction to dipslay button when it is off
-  void displayOff(){
-    fill(133,6,6); stroke(255); rectMode(CENTER); rect(x,y,width,height);
-    fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
+//Fonction to display button.
+  void display(boolean guard){
+    if (guard){
+      fill(r,g,b); stroke(255); rectMode(CENTER); rect(x,y,width,height);
+      fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
+    }
+    else{
+      fill(133,6,6); stroke(255); rectMode(CENTER); rect(x,y,width,height);
+      fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
+    }
   }
 
 //Fonction to check if the mouse is on the button.

@@ -1,4 +1,4 @@
-//Variables
+/*Variables*/
 
 /*Constant definitions*/
 Integer camion1 = 2;
@@ -7,7 +7,7 @@ Integer camion3 = 4;
 Integer none = 0;
 Integer voiture = 1;
   
-/*Variable definitions*/
+/*Machine variables definitions*/
 BRelation<Integer,Integer> Attente_embarquement;
 Boolean Barriere_acces_monte_charge;
 BRelation<Integer,Boolean> Barriere_etage;
@@ -45,8 +45,7 @@ BRelation<Integer,Integer> target_etage_rangee1;
 BRelation<Integer,Integer> target_etage_rangee2;
 BRelation<Integer,Integer> value_vehicules;
 
-//Events//
-
+/*Events*/
 DISPAWN_VEHICULE_VOIE_1 Dispawn_Vehicule_Voie_1 = new DISPAWN_VEHICULE_VOIE_1();
 DISPAWN_VEHICULE_VOIE_2 Dispawn_Vehicule_Voie_2 = new DISPAWN_VEHICULE_VOIE_2();
 EVACUATE_VOIE_1 Evacuate_Voie_1 = new EVACUATE_VOIE_1();
@@ -66,9 +65,37 @@ VOIE_1_to_monte_charge_rangee2 Voie_1_To_Monte_Charge_Rangee2 = new VOIE_1_to_mo
 VOIE_2_to_monte_charge_rangee1 Voie_2_To_Monte_Charge_Rangee1 = new VOIE_2_to_monte_charge_rangee1();
 VOIE_2_to_monte_charge_rangee2 Voie_2_To_Monte_Charge_Rangee2 = new VOIE_2_to_monte_charge_rangee2();
 
+/*Buttons*/
+Button ButtonDispawnV1 = new Button(75,325,70,25,"Dispawn V1",0,128,0,1);
+Button ButtonDispawnV2 = new Button(75,325,70,25,"Dispawn V2",0,128,0,2);
+Button ButtonEvacuateV1 = new Button(75,325,70,25,"Evacuate V1",0,128,0,2);
+Button ButtonEvacuateV2 = new Button(75,325,70,25,"Evacuate V2",0,128,0,2);
+Button ButtonHandleV1 = new Button(75,325,70,25,"Handle V1",0,128,0,2);
+Button ButtonHandleV2 = new Button(75,325,70,25,"Handle V2",0,128,0,2);
+Button ButtonMCR1toF = new Button(75,325,70,25,"MCR1 > Floor",0,128,0,2);
+Button ButtonMCR2toF = new Button(75,325,70,25,"MCR2 > Floor",0,128,0,2);
+Button ButtonMoveMCtoF1 = new Button(75,325,70,25,"MC = Floor1",0,128,0,2);
+Button ButtonMoveMCtoF2 = new Button(75,325,70,25,"MC = Floor2",0,128,0,2);
+Button ButtonMoveMCtoF3 = new Button(75,325,70,25,"MC = Floor3",0,128,0,2);
+Button ButtonBaccesMC = new Button(75,325,70,25,"open BaccesMC",0,128,0,2);
+Button ButtonBMCfront = new Button(75,325,70,25,"open BMCfront",0,128,0,2);
+Button ButtonBMCback = new Button(75,325,70,25,"open BMCback",0,128,0,2);
+Button ButtonBF1 = new Button(75,325,70,25,"open BF1",0,128,0,2);
+Button ButtonBF2 = new Button(75,325,70,25,"open BF2",0,128,0,2);
+Button ButtonBF3 = new Button(75,325,70,25,"open BF3",0,128,0,2);
+Button ButtonSpawnV = new Button(75,325,70,25,"Spawn V",0,128,0,2);
+Button ButtonSpawnC1 = new Button(75,325,70,25,"Spawn C1",0,128,0,2);
+Button ButtonSpawnC2 = new Button(75,325,70,25,"Spawn C2",0,128,0,2);
+Button ButtonSpawnC3 = new Button(75,325,70,25,"Spawn C3",0,128,0,2);
+Button ButtonV1toMCR1 = new Button(75,325,70,25,"V1 to MCR1",0,128,0,2);
+Button ButtonV1toMCR2 = new Button(75,325,70,25,"V1 to MCR2",0,128,0,2);
+Button ButtonV2toMCR1 = new Button(75,325,70,25,"V2 to MCR1",0,128,0,2);
+Button ButtonV2toMCR2 = new Button(75,325,70,25,"V2 to MCR2",0,128,0,2);
+
 //Setup the size of the sketch.
 void setup (){
   size(1200, 800);
+  Init_Machine();
 }
 
 //Display graphical elements and buttons
@@ -89,4 +116,6 @@ void draw(){
   for(int i=0;i<1200;i+=50){
     line(i,0,i,800);
   }
+  
+  Display_button();
 }
