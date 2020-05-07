@@ -43,5 +43,7 @@ void Display_button(){
   ButtonEvacuateV2.display(Evacuate_Voie_2.guard_EVACUATE_VOIE_2());
   ButtonHandleV1.display(Handle_Borne_1.guard_HANDLE_BORNE_1());
   ButtonHandleV2.display(Handle_Borne_2.guard_HANDLE_BORNE_2());
-  ButtonDispawnV2.display(Dispawn_Vehicule_Voie_2.guard_DISPAWN_VEHICULE_VOIE_2());
+  ButtonMCR1toF.display(Monte_Charge_Rangee1_To_Etage.guard_Monte_charge_rangee1_to_etage());
+  ButtonMCR2toF.display(Monte_Charge_Rangee2_To_Etage.guard_Monte_charge_rangee2_to_etage());
+  ButtonMoveMCtoF1.display(Move_Monte_Charge.guard_Move_monte_charge(1));
 }
