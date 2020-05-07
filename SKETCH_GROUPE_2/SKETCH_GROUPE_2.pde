@@ -67,12 +67,12 @@ VOIE_2_to_monte_charge_rangee2 Voie_2_To_Monte_Charge_Rangee2 = new VOIE_2_to_mo
 
 /*Buttons*/
 Button ButtonDispawnV1 = new Button(75,325,70,25,"Dispawn V1",0,128,0,1);
-Button ButtonDispawnV2 = new Button(75,325,70,25,"Dispawn V2",0,128,0,2);
-Button ButtonEvacuateV1 = new Button(75,325,70,25,"Evacuate V1",0,128,0,2);
-Button ButtonEvacuateV2 = new Button(75,325,70,25,"Evacuate V2",0,128,0,2);
-Button ButtonHandleV1 = new Button(75,325,70,25,"Handle V1",0,128,0,2);
-Button ButtonHandleV2 = new Button(75,325,70,25,"Handle V2",0,128,0,2);
-Button ButtonMCR1toF = new Button(75,325,70,25,"MCR1 > Floor",0,128,0,2);
+Button ButtonDispawnV2 = new Button(150,325,70,25,"Dispawn V2",0,128,0,2);
+Button ButtonEvacuateV1 = new Button(225,325,70,25,"Evacuate V1",0,128,0,2);
+Button ButtonEvacuateV2 = new Button(300,325,70,25,"Evacuate V2",0,128,0,2);
+Button ButtonHandleV1 = new Button(375,325,70,25,"Handle V1",0,128,0,2);
+Button ButtonHandleV2 = new Button(450,325,70,25,"Handle V2",0,128,0,2);
+Button ButtonMCR1toF = new Button(525,325,70,25,"MCR1 > Floor",0,128,0,2);
 Button ButtonMCR2toF = new Button(75,325,70,25,"MCR2 > Floor",0,128,0,2);
 Button ButtonMoveMCtoF1 = new Button(75,325,70,25,"MC = Floor1",0,128,0,2);
 Button ButtonMoveMCtoF2 = new Button(75,325,70,25,"MC = Floor2",0,128,0,2);

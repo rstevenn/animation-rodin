@@ -7,7 +7,7 @@ void Init_Machine(){
   Borne_2 = false;
   Monte_charge_etage = 1;
   Etages = (new BRelation<Integer,Integer>(new Pair<Integer,Integer>(1,0),new Pair<Integer,Integer>(2,0),new Pair<Integer,Integer>(3,0)));
-  value_vehicules = (new BRelation<Integer,Integer>(new Pair<Integer,Integer>(voiture,1),new Pair<Integer,Integer>(camion1,1),new Pair<Integer,Integer>(camion2,2),new Pair<Integer,Integer>(camion3,3)));
+  value_vehicules = (new BRelation<Integer,Integer>(new Pair<Integer,Integer>(voiture,1),new Pair<Integer,Integer>(camion1,1),new Pair<Integer,Integer>(camion2,2),new Pair<Integer,Integer>(camion3,3), new Pair<Integer,Integer>(none,3)));
   Test_full_rangee1 = 0;
   Test_full_rangee2 = 0;
   N_slot_full_rangee1 = 0;
