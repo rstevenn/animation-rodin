@@ -39,4 +39,9 @@ void Init_Machine(){
 void Display_button(){
   ButtonDispawnV1.display(Dispawn_Vehicule_Voie_1.guard_DISPAWN_VEHICULE_VOIE_1());
   ButtonDispawnV2.display(Dispawn_Vehicule_Voie_2.guard_DISPAWN_VEHICULE_VOIE_2());
+  ButtonEvacuateV1.display(Evacuate_Voie_1.guard_EVACUATE_VOIE_1());
+  ButtonEvacuateV2.display(Evacuate_Voie_2.guard_EVACUATE_VOIE_2());
+  ButtonHandleV1.display(Handle_Borne_1.guard_HANDLE_BORNE_1());
+  ButtonHandleV2.display(Handle_Borne_2.guard_HANDLE_BORNE_2());
+  ButtonDispawnV2.display(Dispawn_Vehicule_Voie_2.guard_DISPAWN_VEHICULE_VOIE_2());
 }
