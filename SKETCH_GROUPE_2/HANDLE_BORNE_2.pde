@@ -3,11 +3,7 @@ class HANDLE_BORNE_2{
   HANDLE_BORNE_2(){print("HANDLE_BORNE_2 created\n");}
   
 	boolean guard_HANDLE_BORNE_2() {
-<<<<<<< HEAD
 		return (Borne_2.equals(false) && 
-=======
-	  return (Borne_2.equals(false) && 
->>>>>>> 67e369329f3c762ad1bf947636303424d2a17c6f
             !Voie_arrive_2.apply(new Integer(0)).equals(none) &&
             (new Integer(Etages.apply(new Integer(1)) + value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(3)) <= 0 &&
             !Voie_arrive_2.apply(new Integer(0)).equals(voiture) || 
