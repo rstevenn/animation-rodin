@@ -1,7 +1,7 @@
 public class VOIE_2_to_monte_charge_rangee2{
   
   public boolean guard_VOIE_2_to_monte_charge_rangee2() {
-		return ((Voie_arrive_2.apply(new Integer(0)).equals(none)) && (Borne_2.equals(true)) && (Monte_charge_etage.equals(new Integer(1))) && ((new Integer(Test_full_rangee2 + value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(3)) <= 0) && (Barriere_monte_charge.apply(new Integer(1)).equals(true)) && (Barriere_acces_monte_charge.equals(true)));
+		return ((!Voie_arrive_2.apply(new Integer(0)).equals(none)) && (Borne_2.equals(true)) && (Monte_charge_etage.equals(new Integer(1))) && ((new Integer(Test_full_rangee2 + value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(3)) <= 0) && (Barriere_monte_charge.apply(new Integer(1)).equals(true)) && (Barriere_acces_monte_charge.equals(true)));
 	}
 
 	public void run_VOIE_2_to_monte_charge_rangee2(){

@@ -128,6 +128,17 @@ void draw(){
  
   click = false;
   SelectEvent = 0;
+  print("*************************\n");
+  print("Voie_arrive_1: " + Voie_arrive_1 + "\n");
+  print("Voie_arrive_2: " + Voie_arrive_2 + "\n");
+  print("Voie_de_sortie_1: " + Voie_de_sortie_1 + "\n");
+  print("Voie_de_sortie_2: " + Voie_de_sortie_2 + "\n");
+  print("Monte_charge_rangee1: " + Monte_charge_rangee1 + "\n");
+  print("Monte_charge_rangee2: " + Monte_charge_rangee2 + "\n");
+  print("Barriere_voie1: " + Barriere_voie1 + "\n");
+  print("Barriere_voie2: " + Barriere_voie2 + "\n");
+  print("Barriere_etage: " + Barriere_etage + "\n");
+  print("Etages: " + Barriere_monte_charge + "\n");
 }
 
 void mouseClicked(){
