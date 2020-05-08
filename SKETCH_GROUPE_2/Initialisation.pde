@@ -47,6 +47,8 @@ void Display_button(){
   ButtonMCR2toF.display(Monte_Charge_Rangee2_To_Etage.guard_Monte_charge_rangee2_to_etage());
   
   ButtonMoveMCtoF1.display(Move_Monte_Charge.guard_Move_monte_charge(1));
+  ButtonMoveMCtoF2.display(Move_Monte_Charge.guard_Move_monte_charge(2));
+  ButtonMoveMCtoF3.display(Move_Monte_Charge.guard_Move_monte_charge(3));
   
   ButtonBaccesMC.display(Open_Barriere_Acces_Monte_Charge.guard_Open_barriere_acces_monte_charge());
   ButtonBMCfront.display(Open_Barriere_Monte_Charge.guard_Open_barriere_monte_charge(1));
