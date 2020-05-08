@@ -98,7 +98,7 @@ Button ButtonV2toMCR2 = new Button(75,325,70,25,"V2 to MCR2",0,128,0,2);
 
 //Setup the size of the sketch.
 void setup (){
-  size(1200, 800);
+  size(1200, 650);
   Init_Machine();
 }
 
