@@ -2,7 +2,7 @@ class Move_monte_charge{
   
   boolean guard_Move_monte_charge(Integer Value) {
 		return ((new BSet<Integer>(new Integer(1),new Integer(2),new Integer(3)).has(Value))
-           && (!new Integer(new Integer(Monte_charge_etage * new Integer(10)) + Value).equals(new Integer(22))));
+           && Value != Monte_charge_etage);
 	  }
 
 	void run_Move_monte_charge(Integer Value){
