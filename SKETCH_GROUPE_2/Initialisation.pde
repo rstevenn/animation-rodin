@@ -107,9 +107,9 @@ void Do_Event(){
     case 6: Handle_Borne_2.run_HANDLE_BORNE_2();break;
     case 7: Monte_Charge_Rangee1_To_Etage.run_Monte_charge_rangee1_to_etage();break;
     case 8: Monte_Charge_Rangee2_To_Etage.run_Monte_charge_rangee2_to_etage();break;
-    case 9: ;break;
-    case 10: ;break;
-    case 11: ;break;
+    case 9: Move_Monte_Charge.run_Move_monte_charge(1);break;
+    case 10: Move_Monte_Charge.run_Move_monte_charge(2);break;
+    case 11: Move_Monte_Charge.run_Move_monte_charge(3);break;
     case 12: ;break;
     case 13: ;break;
     case 14: ;break;

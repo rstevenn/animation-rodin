@@ -124,7 +124,6 @@ void draw(){
   }
   
   Display_button();
-  print(SelectEvent);
   Do_Event();
   
   click = false;

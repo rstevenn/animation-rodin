@@ -58,7 +58,7 @@ class Button{
   }
   
   int ButtonClick(){
-    if(this.checkPos() && click){return Event;}
+    if(this.checkPos() && (SelectEvent == 0)){print("ok");return Event;}
     else {return 0;}
   }
 }
