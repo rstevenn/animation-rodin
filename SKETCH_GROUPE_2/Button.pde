@@ -1,3 +1,5 @@
+
+
 class Button{
   int x;
   int y;
@@ -8,7 +10,6 @@ class Button{
   int g;
   int b;
   int Event;
-  boolean click;
   
   /*Construction of an object button.
   Parameters:
@@ -58,7 +59,7 @@ class Button{
   }
   
   int ButtonClick(){
-    if(this.checkPos() && (SelectEvent == 0)){print("ok");return Event;}
+    if(this.checkPos() && (click == true)){return Event;}
     else {return 0;}
   }
 }

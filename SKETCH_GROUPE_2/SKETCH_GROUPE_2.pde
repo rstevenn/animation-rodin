@@ -122,10 +122,10 @@ void draw(){
   for(int i=0;i<1200;i+=50){
     line(i,0,i,800);
   }
-  
+
   Display_button();
   Do_Event();
-  
+ 
   click = false;
   SelectEvent = 0;
 }
