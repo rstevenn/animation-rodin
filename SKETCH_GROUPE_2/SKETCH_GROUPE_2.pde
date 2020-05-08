@@ -1,4 +1,6 @@
 /*Variables*/
+boolean click = false;
+int SelectEvent;
 
 /*Constant definitions*/
 Integer camion1 = 2;
@@ -122,4 +124,13 @@ void draw(){
   }
   
   Display_button();
+  print(SelectEvent);
+  Do_Event();
+  
+  click = false;
+  SelectEvent = 0;
+}
+
+void mouseClicked(){
+  click = true;
 }

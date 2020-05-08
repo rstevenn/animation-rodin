@@ -56,4 +56,9 @@ class Button{
       return true;
     } else{return false;}
   }
+  
+  int ButtonClick(){
+    if(this.checkPos() && click){return Event;}
+    else {return 0;}
+  }
 }
