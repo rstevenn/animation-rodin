@@ -135,10 +135,13 @@ void draw(){
   print("Voie_de_sortie_2: " + Voie_de_sortie_2 + "\n");
   print("Monte_charge_rangee1: " + Monte_charge_rangee1 + "\n");
   print("Monte_charge_rangee2: " + Monte_charge_rangee2 + "\n");
+  print("Etages: " + Etages + "\n");
   print("Barriere_voie1: " + Barriere_voie1 + "\n");
   print("Barriere_voie2: " + Barriere_voie2 + "\n");
   print("Barriere_etage: " + Barriere_etage + "\n");
-  print("Etages: " + Barriere_monte_charge + "\n");
+  print("Barriere_monte_charge: " + Barriere_monte_charge + "\n");
+  print("Borne_1: " + Borne_1 + "\n");
+  print("Borne_2: " + Borne_2 + "\n");
 }
 
 void mouseClicked(){
