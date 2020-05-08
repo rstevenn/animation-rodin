@@ -1,5 +1,6 @@
 /*Variables*/
 boolean click = false;
+boolean ACTION = false;
 int SelectEvent;
 
 /*Constant definitions*/
@@ -68,35 +69,35 @@ VOIE_2_to_monte_charge_rangee1 Voie_2_To_Monte_Charge_Rangee1 = new VOIE_2_to_mo
 VOIE_2_to_monte_charge_rangee2 Voie_2_To_Monte_Charge_Rangee2 = new VOIE_2_to_monte_charge_rangee2();
 
 /*Buttons*/
-Button ButtonDispawnV1 = new Button(75,325,70,25,"Dispawn V1",0,128,0,1);
-Button ButtonDispawnV2 = new Button(150,325,70,25,"Dispawn V2",0,128,0,2);
-Button ButtonEvacuateV1 = new Button(225,325,70,25,"Evacuate V1",0,128,0,3);
-Button ButtonEvacuateV2 = new Button(300,325,70,25,"Evacuate V2",0,128,0,4);
-Button ButtonHandleV1 = new Button(375,325,70,25,"Handle V1",0,128,0,5);
-Button ButtonHandleV2 = new Button(450,325,70,25,"Handle V2",0,128,0,6);
-Button ButtonMCR1toF = new Button(525,325,70,25,"MCR1 > Floor",0,128,0,7);
-Button ButtonMCR2toF = new Button(75,275,70,25,"MCR2 > Floor",0,128,0,8);
-Button ButtonMoveMCtoF1 = new Button(150,275,70,25,"MC=Floor1",0,128,0,9);
-Button ButtonMoveMCtoF2 = new Button(225,275,70,25,"MC=Floor2",0,128,0,10);
-Button ButtonMoveMCtoF3 = new Button(300,275,70,25,"MC=Floor3",0,128,0,11);
-Button ButtonBaccesMC = new Button(375,275,70,25,"openBaccesMC",0,128,0,12);
-Button ButtonBMCfront = new Button(450,275,70,25,"openBMCfront",0,128,0,13);
-Button ButtonBMCback = new Button(525,275,70,25,"openBMCback",0,128,0,14);
-Button ButtonBF1 = new Button(75,225,70,25,"openBF1",0,128,0,15);
-Button ButtonBF2 = new Button(150,225,70,25,"openBF2",0,128,0,16);
-Button ButtonBF3 = new Button(225,225,70,25,"openBF3",0,128,0,17);
-Button ButtonSpawnVV1 = new Button(300,225,70,25,"Spawn V V1",0,128,0,18);
-Button ButtonSpawnC1V1 = new Button(375,225,70,25,"Spawn C1 V1",0,128,0,19);
-Button ButtonSpawnC2V1 = new Button(450,225,70,25,"Spawn C2 V1",0,128,0,20);
-Button ButtonSpawnC3V1 = new Button(525,225,70,25,"Spawn C3 V1",0,128,0,21);
-Button ButtonSpawnVV2 = new Button(75,175,70,25,"Spawn V V2",0,128,0,22);
-Button ButtonSpawnC1V2 = new Button(150,175,70,25,"Spawn C1 V2",0,128,0,23);
-Button ButtonSpawnC2V2 = new Button(225,175,70,25,"Spawn C2 V2",0,128,0,24);
-Button ButtonSpawnC3V2 = new Button(300,175,70,25,"Spawn C3 V2",0,128,0,25);
-Button ButtonV1toMCR1 = new Button(375,175,70,25,"V1 to MCR1",0,128,0,26);
-Button ButtonV1toMCR2 = new Button(450,175,70,25,"V1 to MCR2",0,128,0,27);
-Button ButtonV2toMCR1 = new Button(525,175,70,25,"V2 to MCR1",0,128,0,28);
-Button ButtonV2toMCR2 = new Button(75,125,70,25,"V2 to MCR2",0,128,0,29);
+Button ButtonDispawnV1 = new Button(1050,25,70,25,"Dispawn V1",0,128,0,1);
+Button ButtonDispawnV2 = new Button(1125,25,70,25,"Dispawn V2",0,128,0,2);
+Button ButtonEvacuateV1 = new Button(1050,75,70,25,"Evacuate V1",0,128,0,3);
+Button ButtonEvacuateV2 = new Button(1125,75,70,25,"Evacuate V2",0,128,0,4);
+Button ButtonHandleV1 = new Button(675,25,70,25,"Handle V1",0,128,0,5);
+Button ButtonHandleV2 = new Button(750,25,70,25,"Handle V2",0,128,0,6);
+Button ButtonMCR1toF = new Button(375,75,70,25,"MCR1 > Floor",0,128,0,7);
+Button ButtonMCR2toF = new Button(450,75,70,25,"MCR2 > Floor",0,128,0,8);
+Button ButtonMoveMCtoF1 = new Button(825,75,70,25,"MC=Floor1",0,128,0,9);
+Button ButtonMoveMCtoF2 = new Button(900,75,70,25,"MC=Floor2",0,128,0,10);
+Button ButtonMoveMCtoF3 = new Button(975,75,70,25,"MC=Floor3",0,128,0,11);
+Button ButtonBaccesMC = new Button(525,75,70,25,"openBaccesMC",0,128,0,12);
+Button ButtonBMCfront = new Button(600,75,70,25,"openBMCfront",0,128,0,13);
+Button ButtonBMCback = new Button(675,75,70,25,"openBMCback",0,128,0,14);
+Button ButtonBF1 = new Button(825,25,70,25,"openBF1",0,128,0,15);
+Button ButtonBF2 = new Button(900,25,70,25,"openBF2",0,128,0,16);
+Button ButtonBF3 = new Button(975,25,70,25,"openBF3",0,128,0,17);
+Button ButtonSpawnVV1 = new Button(375,25,70,25,"SpawnVV1",0,128,0,18);
+Button ButtonSpawnC1V1 = new Button(450,25,70,25,"SpawnC1V1",0,128,0,19);
+Button ButtonSpawnC2V1 = new Button(525,25,70,25,"SpawnC2V1",0,128,0,20);
+Button ButtonSpawnC3V1 = new Button(600,25,70,25,"SpawnC3V1",0,128,0,21);
+Button ButtonSpawnVV2 = new Button(75,25,70,25,"SpawnVV2",0,128,0,22);
+Button ButtonSpawnC1V2 = new Button(150,25,70,25,"SpawnC1V2",0,128,0,23);
+Button ButtonSpawnC2V2 = new Button(225,25,70,25,"SpawnC2V2",0,128,0,24);
+Button ButtonSpawnC3V2 = new Button(300,25,70,25,"SpawnC3V2",0,128,0,25);
+Button ButtonV1toMCR1 = new Button(225,75,70,25,"V1 to MCR1",0,128,0,26);
+Button ButtonV1toMCR2 = new Button(300,75,70,25,"V1 to MCR2",0,128,0,27);
+Button ButtonV2toMCR1 = new Button(150,75,70,25,"V2 to MCR1",0,128,0,28);
+Button ButtonV2toMCR2 = new Button(75,75,70,25,"V2 to MCR2",0,128,0,29);
 
 //Setup the size of the sketch.
 void setup (){
@@ -122,9 +123,10 @@ void draw(){
   for(int i=0;i<1200;i+=50){
     line(i,0,i,800);
   }
-
+  
   Display_button();
   Do_Event();
+  Decor();
  
   click = false;
   SelectEvent = 0;

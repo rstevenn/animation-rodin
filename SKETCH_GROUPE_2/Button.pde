@@ -37,11 +37,11 @@ class Button{
 
 //Fonction to display button.
   void display(boolean guard){
-    if (this.checkPos() && guard){
+    if (this.checkPos() && guard && ACTION == false){
       fill(r,g,b); stroke(248,219,27); rectMode(CENTER); rect(x,y,width,height);
       fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
     }
-    else if (guard){
+    else if (guard && ACTION == false){
       fill(r,g,b); stroke(255); rectMode(CENTER); rect(x,y,width,height);
       fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
     }

@@ -98,6 +98,42 @@ void Display_button(){
 }
 
 void Do_Event(){
+  if(ACTION == false){
+    switch(SelectEvent){
+      case 1: Dispawn_Vehicule_Voie_1.run_DISPAWN_VEHICULE_VOIE_1();break;
+      case 2: Dispawn_Vehicule_Voie_2.run_DISPAWN_VEHICULE_VOIE_2();break;
+      case 3: Evacuate_Voie_1.run_EVACUATE_VOIE_1();break;
+      case 4: Evacuate_Voie_2.run_EVACUATE_VOIE_2();break;
+      case 5: Handle_Borne_1.run_HANDLE_BORNE_1();break;
+      case 6: Handle_Borne_2.run_HANDLE_BORNE_2();break;
+      case 7: Monte_Charge_Rangee1_To_Etage.run_Monte_charge_rangee1_to_etage();break;
+      case 8: Monte_Charge_Rangee2_To_Etage.run_Monte_charge_rangee2_to_etage();break;
+      case 9: Move_Monte_Charge.run_Move_monte_charge(1);break;
+      case 10: Move_Monte_Charge.run_Move_monte_charge(2);break;
+      case 11: Move_Monte_Charge.run_Move_monte_charge(3);break;
+      case 12: Open_Barriere_Acces_Monte_Charge.run_Open_barriere_acces_monte_charge();break;
+      case 13: Open_Barriere_Monte_Charge.run_Open_barriere_monte_charge(1);break;
+      case 14: Open_Barriere_Monte_Charge.run_Open_barriere_monte_charge(2);break;
+      case 15: Open_Barriere_Etage.run_Open_barriere_etage(1);break;
+      case 16: Open_Barriere_Etage.run_Open_barriere_etage(2);break;
+      case 17: Open_Barriere_Etage.run_Open_barriere_etage(3);break;
+      case 18: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(voiture);break;
+      case 19: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion1);break;
+      case 20: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion2);break;
+      case 21: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion3);break;
+      case 22: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(voiture);break;
+      case 23: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(camion1);break;
+      case 24: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(camion2);break;
+      case 25: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(camion3);break;
+      case 26: Voie_1_To_Monte_Charge_Rangee1.run_VOIE_1_to_monte_charge_rangee1();break;
+      case 27: Voie_1_To_Monte_Charge_Rangee2.run_VOIE_1_to_monte_charge_rangee2();break;
+      case 28: Voie_2_To_Monte_Charge_Rangee1.run_VOIE_2_to_monte_charge_rangee1();break;
+      case 29: Voie_2_To_Monte_Charge_Rangee2.run_VOIE_2_to_monte_charge_rangee2();break;
+    }
+  }
+}
+  
+void Do_Eventq(){
   switch(SelectEvent){
     case 1: Dispawn_Vehicule_Voie_1.run_DISPAWN_VEHICULE_VOIE_1();break;
     case 2: Dispawn_Vehicule_Voie_2.run_DISPAWN_VEHICULE_VOIE_2();break;
