@@ -1,12 +1,11 @@
 class Move_monte_charge{
   
   boolean guard_Move_monte_charge(Integer Value) {
-    print("lol");
-		return ((new BSet<Integer>(new Integer(1),new Integer(2),new Integer(3)).has(Value)) && (!new Integer(new Integer(Monte_charge_etage * new Integer(10)) + Value).equals(new Integer(22))) && (((BRelation.cross(NAT.instance,BOOL.instance)).pow()).has((new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(Select_untouch_stage.apply(new Integer(new Integer(Monte_charge_etage * new Integer(10)) + Value)),false)).union(new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(Monte_charge_etage,false)).union(new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(Value,true))))))));
-	}
+		return ((new BSet<Integer>(new Integer(1),new Integer(2),new Integer(3)).has(Value))
+           && (!new Integer(new Integer(Monte_charge_etage * new Integer(10)) + Value).equals(new Integer(22))));
+	  }
 
 	void run_Move_monte_charge(Integer Value){
-    print("lol");
     if(guard_Move_monte_charge(Value)) {
 			Integer Monte_charge_etage_tmp = Monte_charge_etage;
 			Monte_charge_etage = Value;

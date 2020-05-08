@@ -2,7 +2,7 @@
 
 /*Constant definitions*/
 Integer camion1 = 2;
-Integer camion2 = 5;
+Integer camion2 = 3;
 Integer camion3 = 4;
 Integer none = 0;
 Integer voiture = 1;
