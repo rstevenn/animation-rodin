@@ -124,6 +124,16 @@ void draw(){
     line(i,0,i,800);
   }
   
+//Gestion des images
+//PImage defini un contenant, une image
+//oncharge l'image, et on la stocke dans la variable
+//on a plus qu'à afficher l'image
+//pour ça, on utilise image(), et l'on met en paramètres la variable dans laquelle est stockée l'image, et ensuite sa position
+
+PImage voiture;
+voiture = loadImage("Car-Right-Red-icon.png");
+image(voiture, 75, 375, 64, 64);
+
   Display_button();
   Do_Event();
   Decor();
