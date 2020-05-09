@@ -2,6 +2,7 @@
 boolean click = false;
 boolean ACTION = false;
 int SelectEvent;
+Moving_Vehicules tableau[] = new Moving_Vehicules[15];;
 
 /*Constant definitions*/
 Integer camion1 = 2;
@@ -123,34 +124,13 @@ void draw(){
   for(int i=0;i<1200;i+=50){
     line(i,0,i,800);
   }
-  
-//Gestion des images
-//PImage defini un contenant, une image
-//oncharge l'image, et on la stocke dans la variable
-//on a plus qu'à afficher l'image
-//pour ça, on utilise image(), et l'on met en paramètres la variable dans laquelle est stockée l'image, et ensuite sa position
-
-PImage voiture;
-voiture = loadImage("Car-Right-Red-icon.png");
-image(voiture, 75, 375, 64, 64);
-
-PImage camion1;
-camion1 = loadImage("City-Truck-icon.png");
-image(camion1, 75, 325, 64, 64);
-
-PImage camion2;
-camion2 = loadImage("Dura-truck-icon.png");
-image(camion2, 75, 275, 64, 64);
-
-PImage camion3;
-camion3 = loadImage("Dura-Truck-blue-icon.png");
-image(camion3, 75, 225, 64, 64);
 
   Display_button();
   Do_Event();
+  Anime_Event();
   Decor();
  
-  click = false;
+  /*click = false;
   SelectEvent = 0;
   print("*************************\n");
   print("Voie_arrive_1: " + Voie_arrive_1 + "\n");
@@ -165,7 +145,7 @@ image(camion3, 75, 225, 64, 64);
   print("Barriere_etage: " + Barriere_etage + "\n");
   print("Barriere_monte_charge: " + Barriere_monte_charge + "\n");
   print("Borne_1: " + Borne_1 + "\n");
-  print("Borne_2: " + Borne_2 + "\n");
+  print("Borne_2: " + Borne_2 + "\n");*/
 }
 
 void mouseClicked(){

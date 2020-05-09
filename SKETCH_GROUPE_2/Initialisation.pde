@@ -98,7 +98,8 @@ void Display_button(){
 }
 
 void Do_Event(){
-  if(ACTION == false){
+  if(ACTION == false && SelectEvent != 0){
+    ACTION = true;
     switch(SelectEvent){
       case 1: Dispawn_Vehicule_Voie_1.run_DISPAWN_VEHICULE_VOIE_1();break;
       case 2: Dispawn_Vehicule_Voie_2.run_DISPAWN_VEHICULE_VOIE_2();break;
@@ -133,7 +134,7 @@ void Do_Event(){
   }
 }
   
-void Do_Eventq(){
+void Anime_Event(){
   switch(SelectEvent){
     case 1: Dispawn_Vehicule_Voie_1.run_DISPAWN_VEHICULE_VOIE_1();break;
     case 2: Dispawn_Vehicule_Voie_2.run_DISPAWN_VEHICULE_VOIE_2();break;
@@ -152,7 +153,8 @@ void Do_Eventq(){
     case 15: Open_Barriere_Etage.run_Open_barriere_etage(1);break;
     case 16: Open_Barriere_Etage.run_Open_barriere_etage(2);break;
     case 17: Open_Barriere_Etage.run_Open_barriere_etage(3);break;
-    case 18: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(voiture);break;
+    case 18: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(0,0,1,1);}break;
+             else if(tableau[0] != null && tableau[0].get_x() != 100){tableau[0].deplace_horizontal_right();}break;
     case 19: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion1);break;
     case 20: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion2);break;
     case 21: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion3);break;
