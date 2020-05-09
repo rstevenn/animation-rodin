@@ -134,6 +134,18 @@ PImage voiture;
 voiture = loadImage("Car-Right-Red-icon.png");
 image(voiture, 75, 375, 64, 64);
 
+PImage camion1;
+camion1 = loadImage("City-Truck-icon.png");
+image(camion1, 75, 325, 64, 64);
+
+PImage camion2;
+camion2 = loadImage("Dura-truck-icon.png");
+image(camion2, 75, 275, 64, 64);
+
+PImage camion3;
+camion3 = loadImage("Dura-Truck-blue-icon.png");
+image(camion3, 75, 225, 64, 64);
+
   Display_button();
   Do_Event();
   Decor();
