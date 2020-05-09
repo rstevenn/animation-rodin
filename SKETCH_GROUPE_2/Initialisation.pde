@@ -155,7 +155,7 @@ void Anime_Event(){
     case 17: Open_Barriere_Etage.run_Open_barriere_etage(3);break;
     case 18: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,1);
              tableau[0] = voiture; break;}
-             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
+             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right(); break;}
              else{SelectEvent = 0; ACTION = false;break;}
     case 19: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,2);
              tableau[0] = voiture; break;}

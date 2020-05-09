@@ -1,6 +1,7 @@
 class Moving_Vehicules{
   int x;
   int y;
+  float angle;
   int speed;
   int typeVehicule;
 
@@ -17,6 +18,7 @@ class Moving_Vehicules{
   Moving_Vehicules(int newX, int newY, int newSpeed, int newVehicule){
     x = newX;
     y = newY;
+    angle = 0;
     speed = newSpeed;
     typeVehicule = newVehicule;
   }
@@ -26,20 +28,40 @@ class Moving_Vehicules{
     switch(typeVehicule){
       case 1: PImage voiture;
               voiture = loadImage("Car-Right-Red-icon.png");
+              pushMatrix();
               imageMode(CENTER);
-              image(voiture, x, y, 64, 64);break;
+              translate(x, y);
+              rotate(radians(angle));
+              image(voiture, 0, 0, 64, 64);
+              popMatrix();
+              break;
       case 2: PImage camion1;
               camion1 = loadImage("City-Truck-icon.png");
+              pushMatrix();
               imageMode(CENTER);
-              image(camion1, x, y, 64, 64);break;
+              translate(x, y);
+              rotate(radians(angle));
+              image(camion1, 0, 0, 64, 64);
+              popMatrix();
+              break;
+              
       case 3: PImage camion2;
               camion2 = loadImage("Dura-truck-icon.png");
+              pushMatrix();
               imageMode(CENTER);
-              image(camion2, x, y, 64, 64);break;
+              translate(x, y);
+              rotate(radians(angle));
+              image(camion2, 0, 0, 64, 64);
+              popMatrix();
+              break;
       case 4: PImage camion3;
               camion3 = loadImage("Dura-Truck-blue-icon.png");
               imageMode(CENTER);
-              image(camion3, x, y, 64, 64);break;
+              translate(x, y);
+              rotate(radians(angle));
+              image(camion3, 0, 0, 64, 64);
+              popMatrix();
+              break;
     }
   }
   
@@ -55,21 +77,33 @@ class Moving_Vehicules{
   
   //move object on the right.
   void deplace_horizontal_right(){
-    x = x + speed;
+    x += speed;
   }
   
   //move object on the left.
   void deplace_horizontal_left(){
-    x = x - speed;
+    x -= speed;
   }
   
   //move object down.
   void deplace_vertical_down(){
-    y = y + speed;
+    y += speed;
   }
   
   //move object up
   void deplace_vertical_up(){
-    y = y - speed;
+    y -= speed;
+  }
+  
+  // positive rotation
+  void positive_rotation()
+  {
+    angle += 1;
+  }
+  
+  // negative rotaion
+  void negative_rotation()
+  {
+    angle -= 1;
   }
 }
