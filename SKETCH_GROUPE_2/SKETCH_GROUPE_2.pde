@@ -128,11 +128,15 @@ void draw(){
   Display_button();
   Do_Event();
   Anime_Event();
+  for(int i=0;i<=9;i++){
+    if(tableau[i] != null){
+      tableau[i].display();
+    }
+  }
   Decor();
  
-  /*click = false;
-  SelectEvent = 0;
-  print("*************************\n");
+  click = false;
+  /*print("*************************\n");
   print("Voie_arrive_1: " + Voie_arrive_1 + "\n");
   print("Voie_arrive_2: " + Voie_arrive_2 + "\n");
   print("Voie_de_sortie_1: " + Voie_de_sortie_1 + "\n");

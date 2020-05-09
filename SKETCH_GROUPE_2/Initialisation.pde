@@ -153,15 +153,38 @@ void Anime_Event(){
     case 15: Open_Barriere_Etage.run_Open_barriere_etage(1);break;
     case 16: Open_Barriere_Etage.run_Open_barriere_etage(2);break;
     case 17: Open_Barriere_Etage.run_Open_barriere_etage(3);break;
-    case 18: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(0,0,1,1);}break;
-             else if(tableau[0] != null && tableau[0].get_x() != 100){tableau[0].deplace_horizontal_right();}break;
-    case 19: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion1);break;
-    case 20: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion2);break;
-    case 21: Spawn_Vehicule_Voie_1.run_SPAWN_VEHICULE_VOIE_1(camion3);break;
-    case 22: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(voiture);break;
-    case 23: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(camion1);break;
-    case 24: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(camion2);break;
-    case 25: Spawn_Vehicule_Voie_2.run_SPAWN_VEHICULE_VOIE_2(camion3);break;
+    case 18: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,1);
+             tableau[0] = voiture; break;}
+             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
+    case 19: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,2);
+             tableau[0] = voiture; break;}
+             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
+    case 20: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,3);
+             tableau[0] = voiture; break;}
+             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
+    case 21: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,4);
+             tableau[0] = voiture; break;}
+             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
+    case 22: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,1);
+             tableau[1] = voiture; break;}
+             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
+    case 23: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,2);
+             tableau[1] = voiture; break;}
+             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
+    case 24: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,3);
+             tableau[1] = voiture; break;}
+             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
+    case 25: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,4);
+             tableau[1] = voiture; break;}
+             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
+             else{SelectEvent = 0; ACTION = false;break;}
     case 26: Voie_1_To_Monte_Charge_Rangee1.run_VOIE_1_to_monte_charge_rangee1();break;
     case 27: Voie_1_To_Monte_Charge_Rangee2.run_VOIE_1_to_monte_charge_rangee2();break;
     case 28: Voie_2_To_Monte_Charge_Rangee1.run_VOIE_2_to_monte_charge_rangee1();break;
