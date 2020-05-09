@@ -55,21 +55,21 @@ class Moving_Vehicules{
   
   //move object on the right.
   void deplace_horizontal_right(){
-    x = x + speed;
+    x += speed;
   }
   
   //move object on the left.
   void deplace_horizontal_left(){
-    x = x - speed;
+    x -= speed;
   }
   
   //move object down.
   void deplace_vertical_down(){
-    y = y + speed;
+    y += speed;
   }
   
   //move object up
   void deplace_vertical_up(){
-    y = y - speed;
+    y -= speed;
   }
 }
