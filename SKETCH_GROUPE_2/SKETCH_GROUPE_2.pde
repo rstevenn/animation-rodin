@@ -3,7 +3,7 @@ boolean click = false;
 boolean ACTION = false;
 int SelectEvent;
 Moving_Vehicules tableau[] = new Moving_Vehicules[15];
-Moving_elements MonteCharge = new Moving_elements(100, 100, 2, 100, 100, "");
+Moving_elements MonteCharge = new Moving_elements(475, 375, 2, 150, 150, "");
 
 /*Constant definitions*/
 Integer camion1 = 2;
@@ -129,7 +129,7 @@ void draw(){
   Display_button();
   Do_Event();
   Anime_Event();
-  MonteCharge.dipslay();
+  MonteCharge.display();
   for(int i=0;i<=9;i++){
     if(tableau[i] != null){
       tableau[i].display();

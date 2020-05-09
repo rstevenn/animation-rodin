@@ -27,7 +27,7 @@ class Moving_elements{
   
   //dipslay the object
   void display(){
-    fill(0); stroke(255); rectMode(CENTER); rect(x,y,width,height);
+    fill(25); stroke(255); rectMode(CENTER); rect(x,y,width,height);
     fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
   }
   

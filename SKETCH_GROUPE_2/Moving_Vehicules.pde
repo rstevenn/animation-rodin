@@ -56,6 +56,7 @@ class Moving_Vehicules{
               break;
       case 4: PImage camion3;
               camion3 = loadImage("Dura-Truck-blue-icon.png");
+              pushMatrix();
               imageMode(CENTER);
               translate(x, y);
               rotate(radians(angle));
