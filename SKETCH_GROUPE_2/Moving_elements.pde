@@ -26,7 +26,7 @@ class Moving_elements{
     text = newText;
   }
   
-  Moving_elements(int newX, int newY, int newSpeed, int newWidth, int newHeight, String newText, newColor){
+  Moving_elements(int newX, int newY, int newSpeed, int newWidth, int newHeight, String newText, int newColor){
     x = newX;
     y = newY;
     speed = newSpeed;
@@ -75,5 +75,9 @@ class Moving_elements{
   //move object up
   void deplace_vertical_up(){
     y = y - speed;
+  }
+  
+  void changeColor(int newColor){
+    coloring = newColor;
   }
 }

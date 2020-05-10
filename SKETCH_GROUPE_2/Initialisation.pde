@@ -161,8 +161,11 @@ void Anime_Event(){
              break;
              
     case 12: Open_Barriere_Acces_Monte_Charge.run_Open_barriere_acces_monte_charge();break;
-    case 13: Open_Barriere_Monte_Charge.run_Open_barriere_monte_charge(1);break;
-    case 14: Open_Barriere_Monte_Charge.run_Open_barriere_monte_charge(2);break;
+    
+    case 13: SelectEvent = 0; ACTION = false;break;
+    
+    case 14: SelectEvent = 0; ACTION = false;break;
+    
     case 15: Open_Barriere_Etage.run_Open_barriere_etage(1);break;
     case 16: Open_Barriere_Etage.run_Open_barriere_etage(2);break;
     case 17: Open_Barriere_Etage.run_Open_barriere_etage(3);break;
@@ -230,9 +233,20 @@ void Display_Barriere(){
   }
   
   if(Barriere_monte_charge.apply(1) == true){
+    BFrontMonteCharge.changeColor(50);
     BFrontMonteCharge.displayNoStroke();
   }
   else{
+    BFrontMonteCharge.changeColor(150);
     BFrontMonteCharge.displayNoStroke();
+  }
+  
+  if(Barriere_monte_charge.apply(2) == true){
+    BBackMonteCharge.changeColor(50);
+    BBackMonteCharge.displayNoStroke();
+  }
+  else{
+    BBackMonteCharge.changeColor(150);
+    BBackMonteCharge.displayNoStroke();
   }
 }
