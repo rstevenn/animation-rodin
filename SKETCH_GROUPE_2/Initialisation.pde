@@ -175,7 +175,7 @@ void Anime_Event(){
              else{SelectEvent = 0; ACTION = false;}
              break;
              
-    case 12: Open_Barriere_Acces_Monte_Charge.run_Open_barriere_acces_monte_charge();break;
+    case 12: SelectEvent = 0; ACTION = false;break;
     
     case 13: SelectEvent = 0; ACTION = false;break;
     
@@ -185,47 +185,23 @@ void Anime_Event(){
     case 16: Open_Barriere_Etage.run_Open_barriere_etage(2);break;
     case 17: Open_Barriere_Etage.run_Open_barriere_etage(3);break;
     
-    case 18: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,1);
-             tableau[0] = voiture; break;}
-             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right(); break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 18: SpawnVehiculeAnimation(0, 200, 425, 1);break;
              
-    case 19: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,2);
-             tableau[0] = voiture; break;}
-             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 19: SpawnVehiculeAnimation(0, 200, 425, 2);break;
              
-    case 20: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,3);
-             tableau[0] = voiture; break;}
-             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 20: SpawnVehiculeAnimation(0, 175, 425, 3);break;
              
-    case 21: if(tableau[0] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,325,2,4);
-             tableau[0] = voiture; break;}
-             else if(tableau[0] != null && tableau[0].get_x() != 150){tableau[0].deplace_horizontal_right();break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 21: SpawnVehiculeAnimation(0, 150, 425, 4);break;
              
-    case 22: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,1);
-             tableau[1] = voiture; break;}
-             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 22: SpawnVehiculeAnimation(1, 200, 475, 1);break;
              
-    case 23: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,2);
-             tableau[1] = voiture; break;}
-             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 23: SpawnVehiculeAnimation(1, 200, 475, 2);break;
              
-    case 24: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,3);
-             tableau[1] = voiture; break;}
-             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 24: SpawnVehiculeAnimation(1, 175, 475, 3);break;
              
-    case 25: if(tableau[1] == null){Moving_Vehicules voiture = new Moving_Vehicules(-50,425,2,4);
-             tableau[1] = voiture; break;}
-             else if(tableau[1] != null && tableau[1].get_x() != 150){tableau[1].deplace_horizontal_right();break;}
-             else{SelectEvent = 0; ACTION = false;break;}
+    case 25: SpawnVehiculeAnimation(1, 150, 475, 4);break;
              
-    case 26: Voie_1_To_Monte_Charge_Rangee1.run_VOIE_1_to_monte_charge_rangee1();break;
+    case 26: break;
     case 27: Voie_1_To_Monte_Charge_Rangee2.run_VOIE_1_to_monte_charge_rangee2();break;
     case 28: Voie_2_To_Monte_Charge_Rangee1.run_VOIE_2_to_monte_charge_rangee1();break;
     case 29: Voie_2_To_Monte_Charge_Rangee2.run_VOIE_2_to_monte_charge_rangee2();break;
@@ -247,6 +223,13 @@ void Display_Barriere(){
     fill(150); noStroke(); rectMode(CENTER); rect(250,475,10,50);
   }
   
+  if(Barriere_acces_monte_charge == true){
+    fill(50); noStroke(); rectMode(CENTER); rect(275,450,10,100);
+  }
+  else{
+    fill(150); noStroke(); rectMode(CENTER); rect(275,450,10,100);
+  }
+  
   if(Barriere_monte_charge.apply(1) == true){
     BFrontMonteCharge.changeColor(50);
     BFrontMonteCharge.displayNoStroke();
@@ -264,4 +247,13 @@ void Display_Barriere(){
     BBackMonteCharge.changeColor(150);
     BBackMonteCharge.displayNoStroke();
   }
+}
+
+void SpawnVehiculeAnimation(int voie, int locationX, int locationY, int type){
+  if(tableau[voie] == null){
+    Moving_Vehicules vehicule = new Moving_Vehicules(-50,locationY,2,type);
+    tableau[voie] = vehicule;}
+  else if(tableau[voie] != null && tableau[voie].get_x() < locationX){
+    tableau[voie].deplace_horizontal_right();}
+  else{SelectEvent = 0; ACTION = false;}
 }

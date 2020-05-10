@@ -88,6 +88,10 @@ class Moving_Vehicules{
     return y;
   }
   
+  int typeVehicule(){
+    return typeVehicule;
+  }
+  
   //move object on the right.
   void deplace_horizontal_right(){
     x += speed;
