@@ -38,63 +38,63 @@ void Init_Machine() {
 
 void Display_button() {
   ButtonDispawnV1.display(Dispawn_Vehicule_Voie_1.guard_DISPAWN_VEHICULE_VOIE_1());
-  SelectEvent += ButtonDispawnV1.ButtonClick();
+  SelectEvent += ButtonDispawnV1.ButtonClick(Dispawn_Vehicule_Voie_1.guard_DISPAWN_VEHICULE_VOIE_1());
   ButtonDispawnV2.display(Dispawn_Vehicule_Voie_2.guard_DISPAWN_VEHICULE_VOIE_2());
-  SelectEvent += ButtonDispawnV2.ButtonClick();
+  SelectEvent += ButtonDispawnV2.ButtonClick(Dispawn_Vehicule_Voie_2.guard_DISPAWN_VEHICULE_VOIE_2());
   ButtonEvacuateV1.display(Evacuate_Voie_1.guard_EVACUATE_VOIE_1());
-  SelectEvent += ButtonEvacuateV1.ButtonClick();
+  SelectEvent += ButtonEvacuateV1.ButtonClick(Evacuate_Voie_1.guard_EVACUATE_VOIE_1());
   ButtonEvacuateV2.display(Evacuate_Voie_2.guard_EVACUATE_VOIE_2());
-  SelectEvent += ButtonEvacuateV2.ButtonClick();
+  SelectEvent += ButtonEvacuateV2.ButtonClick(Evacuate_Voie_2.guard_EVACUATE_VOIE_2());
   ButtonHandleV1.display(Handle_Borne_1.guard_HANDLE_BORNE_1());
-  SelectEvent += ButtonHandleV1.ButtonClick();
+  SelectEvent += ButtonHandleV1.ButtonClick(Handle_Borne_1.guard_HANDLE_BORNE_1());
   ButtonHandleV2.display(Handle_Borne_2.guard_HANDLE_BORNE_2());
-  SelectEvent += ButtonHandleV2.ButtonClick();
+  SelectEvent += ButtonHandleV2.ButtonClick(Handle_Borne_2.guard_HANDLE_BORNE_2());
   ButtonMCR1toF.display(Monte_Charge_Rangee1_To_Etage.guard_Monte_charge_rangee1_to_etage());
-  SelectEvent += ButtonMCR1toF.ButtonClick();
+  SelectEvent += ButtonMCR1toF.ButtonClick(Monte_Charge_Rangee1_To_Etage.guard_Monte_charge_rangee1_to_etage());
   ButtonMCR2toF.display(Monte_Charge_Rangee2_To_Etage.guard_Monte_charge_rangee2_to_etage());
-  SelectEvent += ButtonMCR2toF.ButtonClick();
+  SelectEvent += ButtonMCR2toF.ButtonClick(Monte_Charge_Rangee2_To_Etage.guard_Monte_charge_rangee2_to_etage());
   ButtonMoveMCtoF1.display(Move_Monte_Charge.guard_Move_monte_charge(1));
-  SelectEvent += ButtonMoveMCtoF1.ButtonClick();
+  SelectEvent += ButtonMoveMCtoF1.ButtonClick(Move_Monte_Charge.guard_Move_monte_charge(1));
   ButtonMoveMCtoF2.display(Move_Monte_Charge.guard_Move_monte_charge(2));
-  SelectEvent += ButtonMoveMCtoF2.ButtonClick();
+  SelectEvent += ButtonMoveMCtoF2.ButtonClick(Move_Monte_Charge.guard_Move_monte_charge(2));
   ButtonMoveMCtoF3.display(Move_Monte_Charge.guard_Move_monte_charge(3));
-  SelectEvent += ButtonMoveMCtoF3.ButtonClick();
+  SelectEvent += ButtonMoveMCtoF3.ButtonClick(Move_Monte_Charge.guard_Move_monte_charge(3));
   ButtonBaccesMC.display(Open_Barriere_Acces_Monte_Charge.guard_Open_barriere_acces_monte_charge());
-  SelectEvent += ButtonBaccesMC.ButtonClick();
+  SelectEvent += ButtonBaccesMC.ButtonClick(Open_Barriere_Acces_Monte_Charge.guard_Open_barriere_acces_monte_charge());
   ButtonBMCfront.display(Open_Barriere_Monte_Charge.guard_Open_barriere_monte_charge(1));
-  SelectEvent += ButtonBMCfront.ButtonClick();
+  SelectEvent += ButtonBMCfront.ButtonClick(Open_Barriere_Monte_Charge.guard_Open_barriere_monte_charge(1));
   ButtonBMCback.display(Open_Barriere_Monte_Charge.guard_Open_barriere_monte_charge(2));
-  SelectEvent += ButtonBMCback.ButtonClick();
+  SelectEvent += ButtonBMCback.ButtonClick(Open_Barriere_Monte_Charge.guard_Open_barriere_monte_charge(2));
   ButtonBF1.display(Open_Barriere_Etage.guard_Open_barriere_etage(1));
-  SelectEvent += ButtonBF1.ButtonClick();
+  SelectEvent += ButtonBF1.ButtonClick(Open_Barriere_Etage.guard_Open_barriere_etage(1));
   ButtonBF2.display(Open_Barriere_Etage.guard_Open_barriere_etage(2));
-  SelectEvent += ButtonBF2.ButtonClick();
+  SelectEvent += ButtonBF2.ButtonClick(Open_Barriere_Etage.guard_Open_barriere_etage(2));
   ButtonBF3.display(Open_Barriere_Etage.guard_Open_barriere_etage(3));
-  SelectEvent += ButtonBF3.ButtonClick();
+  SelectEvent += ButtonBF3.ButtonClick(Open_Barriere_Etage.guard_Open_barriere_etage(3));
   ButtonSpawnVV1.display(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(voiture));
-  SelectEvent += ButtonSpawnVV1.ButtonClick();
+  SelectEvent += ButtonSpawnVV1.ButtonClick(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(voiture));
   ButtonSpawnC1V1.display(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(camion1));
-  SelectEvent += ButtonSpawnC1V1.ButtonClick();
+  SelectEvent += ButtonSpawnC1V1.ButtonClick(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(camion1));
   ButtonSpawnC2V1.display(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(camion2));
-  SelectEvent += ButtonSpawnC2V1.ButtonClick();
+  SelectEvent += ButtonSpawnC2V1.ButtonClick(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(camion2));
   ButtonSpawnC3V1.display(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(camion3));
-  SelectEvent += ButtonSpawnC3V1.ButtonClick();
+  SelectEvent += ButtonSpawnC3V1.ButtonClick(Spawn_Vehicule_Voie_1.guard_SPAWN_VEHICULE_VOIE_1(camion3));
   ButtonSpawnVV2.display(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(voiture));
-  SelectEvent += ButtonSpawnVV2.ButtonClick();
+  SelectEvent += ButtonSpawnVV2.ButtonClick(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(voiture));
   ButtonSpawnC1V2.display(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(camion1));
-  SelectEvent += ButtonSpawnC1V2.ButtonClick();
+  SelectEvent += ButtonSpawnC1V2.ButtonClick(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(camion1));
   ButtonSpawnC2V2.display(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(camion2));
-  SelectEvent += ButtonSpawnC2V2.ButtonClick();
+  SelectEvent += ButtonSpawnC2V2.ButtonClick(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(camion2));
   ButtonSpawnC3V2.display(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(camion3));
-  SelectEvent += ButtonSpawnC3V2.ButtonClick();
+  SelectEvent += ButtonSpawnC3V2.ButtonClick(Spawn_Vehicule_Voie_2.guard_SPAWN_VEHICULE_VOIE_2(camion3));
   ButtonV1toMCR1.display(Voie_1_To_Monte_Charge_Rangee1.guard_VOIE_1_to_monte_charge_rangee1());
-  SelectEvent += ButtonV1toMCR1.ButtonClick();
+  SelectEvent += ButtonV1toMCR1.ButtonClick(Voie_1_To_Monte_Charge_Rangee1.guard_VOIE_1_to_monte_charge_rangee1());
   ButtonV1toMCR2.display(Voie_1_To_Monte_Charge_Rangee2.guard_VOIE_1_to_monte_charge_rangee2());
-  SelectEvent += ButtonV1toMCR2.ButtonClick();
+  SelectEvent += ButtonV1toMCR2.ButtonClick(Voie_1_To_Monte_Charge_Rangee2.guard_VOIE_1_to_monte_charge_rangee2());
   ButtonV2toMCR1.display(Voie_2_To_Monte_Charge_Rangee1.guard_VOIE_2_to_monte_charge_rangee1());
-  SelectEvent += ButtonV2toMCR1.ButtonClick();
+  SelectEvent += ButtonV2toMCR1.ButtonClick(Voie_2_To_Monte_Charge_Rangee1.guard_VOIE_2_to_monte_charge_rangee1());
   ButtonV2toMCR2.display(Voie_2_To_Monte_Charge_Rangee2.guard_VOIE_2_to_monte_charge_rangee2());
-  SelectEvent += ButtonV2toMCR2.ButtonClick();
+  SelectEvent += ButtonV2toMCR2.ButtonClick(Voie_2_To_Monte_Charge_Rangee2.guard_VOIE_2_to_monte_charge_rangee2());
 }
 
 void Do_Event() {
@@ -195,11 +195,15 @@ void Do_Event() {
 void Anime_Event() {
   switch(SelectEvent) {
   case 1: 
-    Dispawn_Vehicule_Voie_1.run_DISPAWN_VEHICULE_VOIE_1();
+    {
+      DispawnVoieAnimation(1);
+      break;
+    }
+  case 2:
+  {
+    DispawnVoieAnimation(2);
     break;
-  case 2: 
-    Dispawn_Vehicule_Voie_2.run_DISPAWN_VEHICULE_VOIE_2();
-    break;
+  }
   case 3: 
     Evacuate_Voie_1.run_EVACUATE_VOIE_1();
     {
@@ -426,5 +430,23 @@ void EvacuateVoieAnimation(int voie)
   {
     SelectEvent = 0; 
     ACTION = false;
+  }
+}
+
+void DispawnVoieAnimation(int voie)
+{
+  if (tableau[voie+1].get_y() > 100 && voie == 1)
+  {
+    tableau[voie+1].deplace_vertical_up();
+  }
+  else if (tableau[voie+1].get_y() < 800 && voie == 2)
+  {
+    tableau[voie+1].deplace_vertical_down();
+  }
+  else
+  {
+    SelectEvent = 0; 
+    ACTION = false;
+    tableau[voie+1] = null;
   }
 }

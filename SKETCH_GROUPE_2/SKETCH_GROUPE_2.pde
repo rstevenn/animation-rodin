@@ -155,6 +155,10 @@ void draw(){
   print("Barriere_monte_charge: " + Barriere_monte_charge + "\n");
   print("Borne_1: " + Borne_1 + "\n");
   print("Borne_2: " + Borne_2 + "\n");*/
+  
+  stroke(255);
+  fill(0);
+  rect(225, 175, 50, 150);
 }
 
 void mouseClicked(){

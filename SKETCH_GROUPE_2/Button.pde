@@ -58,8 +58,8 @@ class Button{
     } else{return false;}
   }
   
-  int ButtonClick(){
-    if(this.checkPos() && (click == true) && (ACTION != true)){return Event;}
+  int ButtonClick(boolean guard){
+    if(this.checkPos() && (click == true) && (ACTION != true) && (guard == true)){return Event;}
     else {return 0;}
   }
 }
