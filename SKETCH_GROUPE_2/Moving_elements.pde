@@ -5,6 +5,7 @@ class Moving_elements{
   int width;
   int height;
   String text;
+  int coloring;
 
   /*Construction of an object Moving_elements.
   Parameters:
@@ -25,14 +26,24 @@ class Moving_elements{
     text = newText;
   }
   
+  Moving_elements(int newX, int newY, int newSpeed, int newWidth, int newHeight, String newText, newColor){
+    x = newX;
+    y = newY;
+    speed = newSpeed;
+    width = newWidth;
+    height = newHeight;
+    text = newText;
+    coloring = newColor;
+  }
+  
   //dipslay the object
   void display(){
     fill(25); stroke(255); rectMode(CENTER); rect(x,y,width,height);
     fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
   }
   
-  void displayNoStoke(){
-    fill(25); noStroke(); rectMode(CENTER); rect(x,y,width,height);
+  void displayNoStroke(){
+    fill(coloring); noStroke(); rectMode(CENTER); rect(x,y,width,height);
     fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
   }
   

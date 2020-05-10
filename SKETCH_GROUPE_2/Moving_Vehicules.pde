@@ -25,7 +25,7 @@ class Moving_Vehicules{
     typeVehicule = newVehicule;
   }
   
-  Moving_Vehicules(int newX, int newY, int newSpeed, int newVehicule, float enwAngleSpeed)
+  Moving_Vehicules(int newX, int newY, int newSpeed, int newVehicule, float newAngleSpeed)
   {
     x = newX;
     y = newY;

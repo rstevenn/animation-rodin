@@ -228,4 +228,11 @@ void Display_Barriere(){
   else{
     fill(150); noStroke(); rectMode(CENTER); rect(250,475,10,50);
   }
+  
+  if(Barriere_monte_charge.apply(1) == true){
+    BFrontMonteCharge.displayNoStroke();
+  }
+  else{
+    BFrontMonteCharge.displayNoStroke();
+  }
 }

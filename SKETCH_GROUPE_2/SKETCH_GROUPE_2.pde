@@ -4,8 +4,8 @@ boolean ACTION = false;
 int SelectEvent;
 Moving_Vehicules tableau[] = new Moving_Vehicules[15];
 Moving_elements MonteCharge = new Moving_elements(500, 450, 1, 300, 100, "");
-Moving_elements BFrontMonteCharge = new Moving_elements(500, 450, 1, 300, 100, "");
-Moving_elements BBackMonteCharge = new Moving_elements(500, 450, 1, 300, 100, "");
+Moving_elements BFrontMonteCharge = new Moving_elements(350, 450, 1, 10, 100, "");
+Moving_elements BBackMonteCharge = new Moving_elements(650, 450, 1, 10, 100, "");
 
 /*Constant definitions*/
 Integer camion1 = 2;
