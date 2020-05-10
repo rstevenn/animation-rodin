@@ -148,15 +148,30 @@ void Anime_Event(){
     case 7: Monte_Charge_Rangee1_To_Etage.run_Monte_charge_rangee1_to_etage();break;
     case 8: Monte_Charge_Rangee2_To_Etage.run_Monte_charge_rangee2_to_etage();break;
     
-    case 9: if (MonteCharge.get_y() < 450){MonteCharge.deplace_vertical_down();}
+    case 9: if (MonteCharge.get_y() < 450){
+            MonteCharge.deplace_vertical_down();
+            BFrontMonteCharge.deplace_vertical_down();
+            BBackMonteCharge.deplace_vertical_down();
+            }
             else{SelectEvent = 0; ACTION = false;}
             break;
-    case 10: if (MonteCharge.get_y() > 350){MonteCharge.deplace_vertical_up();}
-             else if (MonteCharge.get_y() < 350){MonteCharge.deplace_vertical_down();}
+    case 10: if (MonteCharge.get_y() > 350){
+             MonteCharge.deplace_vertical_up();
+             BFrontMonteCharge.deplace_vertical_up();
+             BBackMonteCharge.deplace_vertical_up();
+             }
+             else if (MonteCharge.get_y() < 350){
+             MonteCharge.deplace_vertical_down();
+             BFrontMonteCharge.deplace_vertical_down();
+             BBackMonteCharge.deplace_vertical_down();
+             }
              else{SelectEvent = 0; ACTION = false;}
              break;
-    case 11: if (MonteCharge.get_y() > 250){MonteCharge.deplace_vertical_up();}
-             else if (MonteCharge.get_y() < 250){MonteCharge.deplace_vertical_down();}
+    case 11: if (MonteCharge.get_y() > 250){
+             MonteCharge.deplace_vertical_up();
+             BFrontMonteCharge.deplace_vertical_up();
+             BBackMonteCharge.deplace_vertical_up();
+             }
              else{SelectEvent = 0; ACTION = false;}
              break;
              
