@@ -3,7 +3,7 @@ boolean click = false;
 boolean ACTION = false;
 int SelectEvent;
 Moving_Vehicules tableau[] = new Moving_Vehicules[15];
-Moving_elements MonteCharge = new Moving_elements(475, 375, 2, 150, 150, "");
+Moving_elements MonteCharge = new Moving_elements(500, 450, 2, 300, 100, "");
 
 /*Constant definitions*/
 Integer camion1 = 2;

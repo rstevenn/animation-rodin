@@ -206,16 +206,16 @@ void Anime_Event(){
 
 void Display_Barriere(){
   if(Barriere_voie1 == true){
-    fill(50); noStroke(); rectMode(CENTER); rect(250,300,10,100);
+    fill(50); noStroke(); rectMode(CENTER); rect(250,425,10,50);
   }
   else{
-    fill(150); noStroke(); rectMode(CENTER); rect(250,300,10,100);
+    fill(150); noStroke(); rectMode(CENTER); rect(250,425,10,50);
   }
   
   if(Barriere_voie2 == true){
-    fill(50); noStroke(); rectMode(CENTER); rect(250,450,10,100);
+    fill(50); noStroke(); rectMode(CENTER); rect(250,475,10,50);
   }
   else{
-    fill(150); noStroke(); rectMode(CENTER); rect(250,450,10,100);
+    fill(150); noStroke(); rectMode(CENTER); rect(250,475,10,50);
   }
 }
