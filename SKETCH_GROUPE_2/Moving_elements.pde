@@ -31,6 +31,11 @@ class Moving_elements{
     fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
   }
   
+  void displayNoStoke(){
+    fill(25); noStroke(); rectMode(CENTER); rect(x,y,width,height);
+    fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
+  }
+  
   //get x
   int get_x(){
     return x;

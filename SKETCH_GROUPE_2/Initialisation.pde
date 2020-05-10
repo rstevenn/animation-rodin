@@ -147,9 +147,19 @@ void Anime_Event(){
     
     case 7: Monte_Charge_Rangee1_To_Etage.run_Monte_charge_rangee1_to_etage();break;
     case 8: Monte_Charge_Rangee2_To_Etage.run_Monte_charge_rangee2_to_etage();break;
-    case 9: Move_Monte_Charge.run_Move_monte_charge(1);break;
-    case 10: Move_Monte_Charge.run_Move_monte_charge(2);break;
-    case 11: Move_Monte_Charge.run_Move_monte_charge(3);break;
+    
+    case 9: if (MonteCharge.get_y() < 450){MonteCharge.deplace_vertical_down();}
+            else{SelectEvent = 0; ACTION = false;}
+            break;
+    case 10: if (MonteCharge.get_y() > 350){MonteCharge.deplace_vertical_up();}
+             else if (MonteCharge.get_y() < 350){MonteCharge.deplace_vertical_down();}
+             else{SelectEvent = 0; ACTION = false;}
+             break;
+    case 11: if (MonteCharge.get_y() > 250){MonteCharge.deplace_vertical_up();}
+             else if (MonteCharge.get_y() < 250){MonteCharge.deplace_vertical_down();}
+             else{SelectEvent = 0; ACTION = false;}
+             break;
+             
     case 12: Open_Barriere_Acces_Monte_Charge.run_Open_barriere_acces_monte_charge();break;
     case 13: Open_Barriere_Monte_Charge.run_Open_barriere_monte_charge(1);break;
     case 14: Open_Barriere_Monte_Charge.run_Open_barriere_monte_charge(2);break;
