@@ -58,21 +58,21 @@ class Moving_Vehicules{
               break;
               
       case 3: PImage camion2;
-              camion2 = loadImage("Truck-Right-blue-icon.png");
+              camion2 = loadImage("Dura-truck-icon.png");
               pushMatrix();
               imageMode(CENTER);
               translate(x, y);
               rotate(radians(angle));
-              image(camion2, 0, 0, 100, 64);
+              image(camion2, 0, 0, 64, 64);
               popMatrix();
               break;
       case 4: PImage camion3;
-              camion3 = loadImage("Truck-Right-red-icon.png");
+              camion3 = loadImage("Dura-Truck-blue-icon.png");
               pushMatrix();
               imageMode(CENTER);
               translate(x, y);
               rotate(radians(angle));
-              image(camion3, 0, 0, 150, 64);
+              image(camion3, 0, 0, 64, 64);
               popMatrix();
               break;
     }
