@@ -2,6 +2,7 @@ class Moving_Vehicules{
   int x;
   int y;
   float angle;
+  float angleSpeed;
   int speed;
   int typeVehicule;
 
@@ -19,6 +20,17 @@ class Moving_Vehicules{
     x = newX;
     y = newY;
     angle = 0;
+    angleSpeed = 1;
+    speed = newSpeed;
+    typeVehicule = newVehicule;
+  }
+  
+  Moving_Vehicules(int newX, int newY, int newSpeed, int newVehicule, float enwAngleSpeed)
+  {
+    x = newX;
+    y = newY;
+    angle = 0;
+    angleSpeed = newAngleSpeed;
     speed = newSpeed;
     typeVehicule = newVehicule;
   }
@@ -99,12 +111,12 @@ class Moving_Vehicules{
   // positive rotation
   void positive_rotation()
   {
-    angle += 1;
+    angle += angleSpeed;
   }
   
   // negative rotaion
   void negative_rotation()
   {
-    angle -= 1;
+    angle -= angleSpeed;
   }
 }
