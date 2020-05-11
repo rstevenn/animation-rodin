@@ -630,7 +630,7 @@ void PutVehiculesOnMC(int Slot0, int Slot1, int Slot2, int Slot3) {
 boolean PutInEtage = false;
 void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){  
   boolean animated = false;
-  if(tableau[Slot1].get_x() < 800 && PutInEtage == false){
+  if(tableau[Slot1] != null && tableau[Slot1].get_x() < 800 && PutInEtage == false){
     tableau[Slot1].deplace_horizontal_right();
     animated = true;
   }
@@ -681,5 +681,6 @@ void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){
     SelectEvent = 0; 
     ACTION = false;
     animated = false;
+    PutInEtage = false;
   }
 }
