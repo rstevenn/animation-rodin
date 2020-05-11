@@ -109,6 +109,11 @@ Button ButtonV1toMCR2 = new Button(300,75,70,25,"V1 to MCR2",0,128,0,27);
 Button ButtonV2toMCR1 = new Button(150,75,70,25,"V2 to MCR1",0,128,0,28);
 Button ButtonV2toMCR2 = new Button(75,75,70,25,"V2 to MCR2",0,128,0,29);
 
+// Counters of slots take in the first stage
+Counter Stage1Counter = new Counter(720, 450, 60, 25);
+Counter Stage2Counter = new Counter(720, 350, 60, 25);
+Counter Stage3Counter = new Counter(720, 250, 60, 25);
+
 //Setup the size of the sketch.
 void setup (){
   size(1200, 825);

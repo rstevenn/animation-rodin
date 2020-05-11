@@ -9,4 +9,9 @@ void DecorRoof(){
   rect(725, 350, 150, 100);
   rect(725, 450, 150, 100);
   popStyle();
+  
+  // show the counter state
+  Stage1Counter.display(Etages.apply(1));
+  Stage2Counter.display(Etages.apply(2));
+  Stage3Counter.display(Etages.apply(3));
 }
