@@ -239,17 +239,7 @@ void Anime_Event() {
       MonteCharge.deplace_vertical_down();
       BFrontMonteCharge.deplace_vertical_down();
       BBackMonteCharge.deplace_vertical_down();
-      
-      for (int i = 4; i < 10; i++)
-      {
-        if (tableau[i] != null)
-        {
-          tableau[i].speed = 1;
-          tableau[i].deplace_vertical_down();
-          tableau[i].speed = 2;
-        }
-      }
-  } else {
+    } else {
       SelectEvent = 0; 
       ACTION = false;
     }
@@ -259,28 +249,10 @@ void Anime_Event() {
       MonteCharge.deplace_vertical_up();
       BFrontMonteCharge.deplace_vertical_up();
       BBackMonteCharge.deplace_vertical_up();
-      for (int i = 4; i < 10; i++)
-      {
-        if (tableau[i] != null)
-        {
-          tableau[i].speed = 1;
-          tableau[i].deplace_vertical_up();
-          tableau[i].speed = 2;
-        }
-      }
     } else if (MonteCharge.get_y() < 350) {
       MonteCharge.deplace_vertical_down();
       BFrontMonteCharge.deplace_vertical_down();
       BBackMonteCharge.deplace_vertical_down();
-      for (int i = 4; i < 10; i++)
-      {
-        if (tableau[i] != null)
-        {
-          tableau[i].speed = 1;
-          tableau[i].deplace_vertical_down();
-          tableau[i].speed = 2;
-        }
-      }
     } else {
       SelectEvent = 0; 
       ACTION = false;
@@ -291,15 +263,6 @@ void Anime_Event() {
       MonteCharge.deplace_vertical_up();
       BFrontMonteCharge.deplace_vertical_up();
       BBackMonteCharge.deplace_vertical_up();
-      for (int i = 4; i < 10; i++)
-      {
-        if (tableau[i] != null)
-        {
-          tableau[i].speed = 1;
-          tableau[i].deplace_vertical_up();
-          tableau[i].speed = 2;
-        }
-      }
     } else {
       SelectEvent = 0; 
       ACTION = false;
@@ -407,45 +370,45 @@ void Anime_Event() {
     }
     
     if(tableau[4] != null){
-      if(tableau[4].typeVehicule() == 1 && tableau[4].get_x() < 575){
+      if(tableau[4].typeVehicule() == 1 && tableau[4].get_x() < 600){
         tableau[4].deplace_horizontal_right();
         animated = true;
       }
-      else if(tableau[4].typeVehicule() == 2 && tableau[4].get_x() < 575){
+      else if(tableau[4].typeVehicule() == 2 && tableau[4].get_x() < 600){
         tableau[4].deplace_horizontal_right();
         animated = true;
       }
-      else if(tableau[4].typeVehicule() == 3 && tableau[4].get_x() < 575){
+      else if(tableau[4].typeVehicule() == 3 && tableau[4].get_x() < 600){
         tableau[4].deplace_horizontal_right();
         animated = true;
       }
-      else if(tableau[4].typeVehicule() == 4 && tableau[4].get_x() < 500){
+      else if(tableau[4].typeVehicule() == 4 && tableau[4].get_x() < 600){
         tableau[4].deplace_horizontal_right();
         animated = true;
       }
     }
     
     if(tableau[5] != null){
-      if(tableau[5].typeVehicule() == 1 && (tableau[5].get_x() < 475)){
+      if(tableau[5].typeVehicule() == 1 && (tableau[5].get_x() < 550)){
         tableau[5].deplace_horizontal_right();
         animated = true;
       }
-      else if(tableau[5].typeVehicule() == 2 && tableau[5].get_x() < 475){
+      else if(tableau[5].typeVehicule() == 2 && tableau[5].get_x() < 550){
         tableau[4].deplace_horizontal_right();
         animated = true;
       }
-      else if(tableau[5].typeVehicule() == 3 && tableau[5].get_x() < 425){
+      else if(tableau[5].typeVehicule() == 3 && tableau[5].get_x() < 550){
         tableau[5].deplace_horizontal_right();
         animated = true;
       }
     }
     
     if(tableau[6] != null){
-      if(tableau[6].typeVehicule() == 1 && tableau[6].get_x() < 375){
+      if(tableau[6].typeVehicule() == 1 && tableau[6].get_x() < 500){
         tableau[6].deplace_horizontal_right();
         animated = true;
       }
-      else if(tableau[6].typeVehicule() == 2 && tableau[6].get_x() < 375){
+      else if(tableau[6].typeVehicule() == 2 && tableau[6].get_x() < 500){
         tableau[6].deplace_horizontal_right();
         animated = true;
       }
@@ -475,36 +438,36 @@ void Display_Barriere() {
     fill(50); 
     noStroke(); 
     rectMode(CENTER); 
-    rect(250, 425, 10, 50);
+    rect(250, 425, 6, 50);
   } else {
     fill(150); 
     noStroke(); 
     rectMode(CENTER); 
-    rect(250, 425, 10, 50);
+    rect(250, 425, 6, 50);
   }
 
   if (Barriere_voie2 == true) {
     fill(50); 
     noStroke(); 
     rectMode(CENTER); 
-    rect(250, 475, 10, 50);
+    rect(250, 475, 6, 50);
   } else {
     fill(150); 
     noStroke(); 
     rectMode(CENTER); 
-    rect(250, 475, 10, 50);
+    rect(250, 475, 6, 50);
   }
 
   if (Barriere_acces_monte_charge == true) {
     fill(50); 
     noStroke(); 
     rectMode(CENTER); 
-    rect(275, 450, 10, 100);
+    rect(425, 450, 6, 100);
   } else {
     fill(150); 
     noStroke(); 
     rectMode(CENTER); 
-    rect(275, 450, 10, 100);
+    rect(425, 450, 6, 100);
   }
 
   if (Barriere_monte_charge.apply(1) == true) {

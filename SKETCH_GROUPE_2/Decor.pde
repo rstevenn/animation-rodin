@@ -9,6 +9,6 @@ void Decor() {
   line(200, 600, 200, 650); //bar en dessous de la diagonale voie 2
   line(250, 400, 250, 250); //bar voie 1 au dessus de barriere
   line(250, 500, 250, 650); //bar voie 2 en dessous de barriere 
-  line(250, 400, 350, 400); //bar apres la barriere voie 1
-  line(250, 500, 350, 500); //bar apres la barriere voie 2
+  line(250, 400, 450, 400); //bar apres la barriere voie 1
+  line(250, 500, 450, 500); //bar apres la barriere voie 2
 }

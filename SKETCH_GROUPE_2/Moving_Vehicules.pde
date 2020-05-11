@@ -44,7 +44,7 @@ class Moving_Vehicules{
               imageMode(CENTER);
               translate(x, y);
               rotate(radians(angle));
-              image(voiture, -32, 0, 64, 64);
+              image(voiture, -32, 0, 45, 45);
               popMatrix();
               break;
       case 2: PImage camion1;
@@ -63,7 +63,7 @@ class Moving_Vehicules{
               imageMode(CENTER);
               translate(x, y);
               rotate(radians(angle));
-              image(camion2, -50, 0, 100, 64);
+              image(camion2, -50, 0, 90, 64);
               popMatrix();
               break;
       case 4: PImage camion3;
@@ -72,7 +72,7 @@ class Moving_Vehicules{
               imageMode(CENTER);
               translate(x, y);
               rotate(radians(angle));
-              image(camion3, -75, 0, 150, 64);
+              image(camion3, -75, 0, 140, 64);
               popMatrix();
               break;
     }
