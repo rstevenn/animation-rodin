@@ -4,7 +4,7 @@ void Decor() {
   noStroke();
   rectMode(CORNER);
   rect(0, 400, 450, 100); // horizontal arrivée
-  rect(200, 250, 50, 600);  // verticale arrivée 
+  rect(200, 250, 50, 500);  // verticale arrivée 
   triangle(200, 300, 100, 400, 200, 400); // tringle haut
   triangle(100, 500, 200, 600, 200, 500); // triangle bas
   
