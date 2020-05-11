@@ -239,7 +239,17 @@ void Anime_Event() {
       MonteCharge.deplace_vertical_down();
       BFrontMonteCharge.deplace_vertical_down();
       BBackMonteCharge.deplace_vertical_down();
-    } else {
+      
+      for (int i = 4; i < 10; i++)
+      {
+        if (tableau[i] != null)
+        {
+          tableau[i].speed = 1;
+          tableau[i].deplace_vertical_down();
+          tableau[i].speed = 2;
+        }
+      }
+  } else {
       SelectEvent = 0; 
       ACTION = false;
     }
@@ -249,10 +259,28 @@ void Anime_Event() {
       MonteCharge.deplace_vertical_up();
       BFrontMonteCharge.deplace_vertical_up();
       BBackMonteCharge.deplace_vertical_up();
+      for (int i = 4; i < 10; i++)
+      {
+        if (tableau[i] != null)
+        {
+          tableau[i].speed = 1;
+          tableau[i].deplace_vertical_up();
+          tableau[i].speed = 2;
+        }
+      }
     } else if (MonteCharge.get_y() < 350) {
       MonteCharge.deplace_vertical_down();
       BFrontMonteCharge.deplace_vertical_down();
       BBackMonteCharge.deplace_vertical_down();
+      for (int i = 4; i < 10; i++)
+      {
+        if (tableau[i] != null)
+        {
+          tableau[i].speed = 1;
+          tableau[i].deplace_vertical_down();
+          tableau[i].speed = 2;
+        }
+      }
     } else {
       SelectEvent = 0; 
       ACTION = false;
@@ -263,6 +291,15 @@ void Anime_Event() {
       MonteCharge.deplace_vertical_up();
       BFrontMonteCharge.deplace_vertical_up();
       BBackMonteCharge.deplace_vertical_up();
+      for (int i = 4; i < 10; i++)
+      {
+        if (tableau[i] != null)
+        {
+          tableau[i].speed = 1;
+          tableau[i].deplace_vertical_up();
+          tableau[i].speed = 2;
+        }
+      }
     } else {
       SelectEvent = 0; 
       ACTION = false;
