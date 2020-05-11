@@ -1,3 +1,6 @@
+
+
+
 /*Variables*/
 boolean click = false;
 boolean ACTION = false;
@@ -6,6 +9,9 @@ Moving_Vehicules tableau[] = new Moving_Vehicules[15];
 Moving_elements MonteCharge = new Moving_elements(525, 450, 1, 150, 100, "");
 Moving_elements BFrontMonteCharge = new Moving_elements(450, 450, 1, 6, 100, "", 150);
 Moving_elements BBackMonteCharge = new Moving_elements(600, 450, 1, 6, 100, "", 150);
+Moving_elements BEtage1 = new Moving_elements(625, 450, 1, 6, 100, "", 150);
+Moving_elements BEtage2 = new Moving_elements(625, 350, 1, 6, 100, "", 150);
+Moving_elements BEtage3 = new Moving_elements(625, 250, 1, 6, 100, "", 150);
 
 /*Constant definitions*/
 Integer camion1 = 2;
