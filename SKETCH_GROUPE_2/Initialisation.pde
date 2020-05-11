@@ -453,7 +453,7 @@ void Display_Barriere() {
     BBackMonteCharge.displayNoStroke();
   }
 
-  if (Barriere_etage.apply(1) == true) {
+  if (((SelectEvent == 7 || SelectEvent == 8) && Monte_charge_etage == 1&& ACTION == true) || Barriere_etage.apply(1) == true) {
     BEtage1.changeColor(50);
     BEtage1.displayNoStroke();
   } else {
@@ -461,7 +461,7 @@ void Display_Barriere() {
     BEtage1.displayNoStroke();
   }
 
-  if (Barriere_etage.apply(2) == true) {
+  if (((SelectEvent == 7 || SelectEvent == 8) && Monte_charge_etage == 2&& ACTION == true) ||Barriere_etage.apply(2) == true) {
     BEtage2.changeColor(50);
     BEtage2.displayNoStroke();
   } else {
@@ -469,7 +469,7 @@ void Display_Barriere() {
     BEtage2.displayNoStroke();
   }
 
-  if (Barriere_etage.apply(3) == true) {
+  if (((SelectEvent == 7 || SelectEvent == 8) && Monte_charge_etage == 3 && ACTION == true) ||Barriere_etage.apply(3) == true) {
     BEtage3.changeColor(50);
     BEtage3.displayNoStroke();
   } else {
