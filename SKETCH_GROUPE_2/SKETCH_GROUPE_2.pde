@@ -158,7 +158,10 @@ void draw(){
   
   stroke(255);
   fill(0);
+  pushStyle();
+  fill(#282828);
   rect(225, 175, 50, 150);
+  popStyle();
 }
 
 void mouseClicked(){
