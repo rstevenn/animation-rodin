@@ -368,11 +368,28 @@ void Anime_Event() {
     break;
   
   case 27: 
-    Voie_1_To_Monte_Charge_Rangee2.run_VOIE_1_to_monte_charge_rangee2();
+    if(tableau[0] != null && tableau[0].get_x() < 400){
+      tableau[0].deplace_horizontal_right();
+    }
+    else if(tableau[0] != null && tableau[0].get_y() < 475){
+      tableau[0].deplace_vertical_down();
+    }
+    else{
+      PutVehiculesOnMC(0,7,8,9);
+    }
     break;
-  case 28: 
-    Voie_2_To_Monte_Charge_Rangee1.run_VOIE_2_to_monte_charge_rangee1();
+  case 28:
+    if(tableau[1] != null && tableau[1].get_x() < 400){
+      tableau[1].deplace_horizontal_right();
+    }
+    else if(tableau[1] != null && tableau[1].get_y() > 425){
+      tableau[1].deplace_vertical_up();
+    }
+    else{
+      PutVehiculesOnMC(1,4,5,6);
+    }
     break;
+
   case 29: 
     PutVehiculesOnMC(1,7,8,9);
     break;
@@ -552,7 +569,7 @@ void PutVehiculesOnMC(int Slot0, int Slot1,int Slot2,int Slot3){
       }
     }
     
-    if(tableau[5] != null){
+    if(tableau[Slot2] != null){
       if(tableau[Slot2].typeVehicule() == 1 && ((tableau[Slot2].get_x() < 555 && tableau[Slot1].typeVehicule() == 1) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
         tableau[Slot2].deplace_horizontal_right();
         animated = true;
