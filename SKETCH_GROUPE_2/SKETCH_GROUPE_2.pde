@@ -105,7 +105,7 @@ Button ButtonV2toMCR2 = new Button(75,75,70,25,"V2 to MCR2",0,128,0,29);
 
 //Setup the size of the sketch.
 void setup (){
-  size(1200, 650);
+  size(1200, 825);
   Init_Machine();
 }
 
@@ -114,18 +114,18 @@ void draw(){
   //draw graphical elements.
   background(0);
   stroke(25);
-  for(int i=0;i<800;i+=25){
+  for(int i=0;i<825;i+=25){
     line(0,i,1200,i);
   }
   for(int i=0;i<1200;i+=25){
-    line(i,0,i,800);
+    line(i,0,i,825);
   }
   stroke(70);
-  for(int i=0;i<800;i+=50){
+  for(int i=0;i<825;i+=50){
     line(0,i,1200,i);
   }
   for(int i=0;i<1200;i+=50){
-    line(i,0,i,800);
+    line(i,0,i,825);
   }
 
   Display_button();
@@ -139,6 +139,7 @@ void draw(){
       tableau[i].display();
     }
   }
+  DecorRoof();
  
   click = false;
   /*print("*************************\n");
@@ -155,13 +156,6 @@ void draw(){
   print("Barriere_monte_charge: " + Barriere_monte_charge + "\n");
   print("Borne_1: " + Borne_1 + "\n");
   print("Borne_2: " + Borne_2 + "\n");*/
-  
-  stroke(255);
-  fill(0);
-  pushStyle();
-  fill(#282828);
-  rect(225, 175, 50, 150);
-  popStyle();
 }
 
 void mouseClicked(){
