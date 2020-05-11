@@ -398,7 +398,7 @@ void Anime_Event() {
 }
 
 void Display_Barriere() {
-  if (ACTION = true && (SelectEvent == 26 || SelectEvent ==27 )) {
+  if ((ACTION = true && (SelectEvent == 26 || SelectEvent ==27 )) || Borne_1 == true) {
     fill(50); 
     noStroke(); 
     rectMode(CENTER); 
@@ -410,7 +410,7 @@ void Display_Barriere() {
     rect(250, 425, 6, 50);
   }
 
-  if (ACTION = true && (SelectEvent == 28 || SelectEvent == 29)) {
+  if ((ACTION = true && (SelectEvent == 28 || SelectEvent == 29)) || Borne_2 == true) {
     fill(50); 
     noStroke(); 
     rectMode(CENTER); 
