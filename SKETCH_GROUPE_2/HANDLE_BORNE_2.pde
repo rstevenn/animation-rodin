@@ -5,8 +5,8 @@ class HANDLE_BORNE_2{
 	boolean guard_HANDLE_BORNE_2() {
 		return (Borne_2.equals(false) && 
             !Voie_arrive_2.apply(new Integer(0)).equals(none) &&
-            (new Integer(Etages.apply(new Integer(1)) + value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(6)) <= 0 &&
-            (!Voie_arrive_2.apply(new Integer(0)).equals(voiture) || 
+            ((new Integer(Etages.apply(new Integer(1)) + value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(6)) <= 0 &&
+            !Voie_arrive_2.apply(new Integer(0)).equals(voiture) || 
             (new Integer(Etages.apply(new Integer(2)) + 
             value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(6)) <= 0 || 
             (new Integer(Etages.apply(new Integer(3)) + value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(6)) <= 0 )&&
