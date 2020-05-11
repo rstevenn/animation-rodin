@@ -1,7 +1,7 @@
 class Monte_charge_rangee1_to_etage{
   
   boolean guard_Monte_charge_rangee1_to_etage() {
-		return ((!N_slot_full_rangee1.equals(new Integer(0))) && (!Test_full_rangee1.equals(new Integer(0))) && (NAT.instance.has(new Integer(Test_full_rangee1 - value_vehicules.apply(Monte_charge_rangee1.apply(N_slot_full_rangee1))))) && (target_etage_rangee1.apply(N_slot_full_rangee1).equals(Monte_charge_etage)) && (Barriere_monte_charge.apply(new Integer(2)).equals(true)) && (NAT.instance.has(Temporary_target_1)));
+		return ((!N_slot_full_rangee1.equals(new Integer(0))) && (!Test_full_rangee1.equals(new Integer(0))) && (NAT.instance.has(new Integer(Test_full_rangee1 - value_vehicules.apply(Monte_charge_rangee1.apply(N_slot_full_rangee1))))) && (target_etage_rangee1.apply(N_slot_full_rangee1).equals(Monte_charge_etage)) && (Barriere_monte_charge.apply(Monte_charge_etage).equals(true)) &&  Barriere_etage.apply(Monte_charge_etage).equals(true) && (NAT.instance.has(Temporary_target_1)));
 	}
 
 	void run_Monte_charge_rangee1_to_etage(){
