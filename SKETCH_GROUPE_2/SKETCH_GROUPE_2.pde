@@ -80,22 +80,22 @@ VOIE_2_to_monte_charge_rangee2 Voie_2_To_Monte_Charge_Rangee2 = new VOIE_2_to_mo
 
 /*Buttons*/
 Button ButtonDispawnV1 = new Button(300,275,70,25,"Dispawn V1",0,128,0,1);
-Button ButtonDispawnV2 = new Button(300,600,70,25,"Dispawn V2",0,128,0,2);
+Button ButtonDispawnV2 = new Button(300,625,70,25,"Dispawn V2",0,128,0,2);
 Button ButtonEvacuateV1 = new Button(125,315,70,25,"Evacuate V1",0,128,0,3);
 Button ButtonEvacuateV2 = new Button(125,580,70,25,"Evacuate V2",0,128,0,4);
-Button ButtonHandleV1 = new Button(675,25,70,25,"Handle V1",0,128,0,5);
-Button ButtonHandleV2 = new Button(750,25,70,25,"Handle V2",0,128,0,6);
-Button ButtonMCR1toF = new Button(375,75,70,25,"MCR1 > Floor",0,128,0,7);
-Button ButtonMCR2toF = new Button(450,75,70,25,"MCR2 > Floor",0,128,0,8);
-Button ButtonMoveMCtoF1 = new Button(825,75,70,25,"MC=Floor1",0,128,0,9);
-Button ButtonMoveMCtoF2 = new Button(900,75,70,25,"MC=Floor2",0,128,0,10);
-Button ButtonMoveMCtoF3 = new Button(975,75,70,25,"MC=Floor3",0,128,0,11);
-Button ButtonBaccesMC = new Button(525,75,70,25,"openBaccesMC",0,128,0,12);
-Button ButtonBMCfront = new Button(600,75,70,25,"openBMCfront",0,128,0,13);
-Button ButtonBMCback = new Button(675,75,70,25,"openBMCback",0,128,0,14);
-Button ButtonBF1 = new Button(825,25,70,25,"openBF1",0,128,0,15);
-Button ButtonBF2 = new Button(900,25,70,25,"openBF2",0,128,0,16);
-Button ButtonBF3 = new Button(975,25,70,25,"openBF3",0,128,0,17);
+Button ButtonHandleV1 = new Button(300,375,70,25,"Handle V1",0,128,0,5);
+Button ButtonHandleV2 = new Button(300,525,70,25,"Handle V2",0,128,0,6);
+Button ButtonMCR1toF = new Button(725, 175,70,25,"MCR1 > Floor",0,128,0,7);
+Button ButtonMCR2toF = new Button(725, 125,70,25,"MCR2 > Floor",0,128,0,8);
+Button ButtonMoveMCtoF1 = new Button(850,425,70,25,"MC=Floor1",0,128,0,9);
+Button ButtonMoveMCtoF2 = new Button(850,325,70,25,"MC=Floor2",0,128,0,10);
+Button ButtonMoveMCtoF3 = new Button(850,225,70,25,"MC=Floor3",0,128,0,11);
+Button ButtonBaccesMC = new Button(410,375,70,25,"openBaccesMC",0,128,0,12);
+Button ButtonBMCfront = new Button(450,525,70,25,"openBMCfront",0,128,0,13);
+Button ButtonBMCback = new Button(600,525,70,25,"openBMCback",0,128,0,14);
+Button ButtonBF1 = new Button(850,475,70,25,"openBF1",0,128,0,15);
+Button ButtonBF2 = new Button(850,375,70,25,"openBF2",0,128,0,16);
+Button ButtonBF3 = new Button(850,275,70,25,"openBF3",0,128,0,17);
 Button ButtonSpawnVV1 = new Button(50,285,70,25,"SpawnVV1",0,128,0,18);
 Button ButtonSpawnC1V1 = new Button(50,315,70,25,"SpawnC1V1",0,128,0,19);
 Button ButtonSpawnC2V1 = new Button(50,345,70,25,"SpawnC2V1",0,128,0,20);
@@ -104,10 +104,10 @@ Button ButtonSpawnVV2 = new Button(50,525,70,25,"SpawnVV2",0,128,0,22);
 Button ButtonSpawnC1V2 = new Button(50,555,70,25,"SpawnC1V2",0,128,0,23);
 Button ButtonSpawnC2V2 = new Button(50,585,70,25,"SpawnC2V2",0,128,0,24);
 Button ButtonSpawnC3V2 = new Button(50,615,70,25,"SpawnC3V2",0,128,0,25);
-Button ButtonV1toMCR1 = new Button(1150,75,70,25,"V1 to MCR1",0,128,0,26);
-Button ButtonV1toMCR2 = new Button(300,75,70,25,"V1 to MCR2",0,128,0,27);
-Button ButtonV2toMCR1 = new Button(150,75,70,25,"V2 to MCR1",0,128,0,28);
-Button ButtonV2toMCR2 = new Button(75,75,70,25,"V2 to MCR2",0,128,0,29);
+Button ButtonV1toMCR1 = new Button(125, 255,70,25,"V1 to MCR1",0,128,0,26);
+Button ButtonV1toMCR2 = new Button(125, 285,70,25,"V1 to MCR2",0,128,0,27);
+Button ButtonV2toMCR1 = new Button(125, 610,70,25,"V2 to MCR1",0,128,0,28);
+Button ButtonV2toMCR2 = new Button(125, 640,70,25,"V2 to MCR2",0,128,0,29);
 
 // Counters of slots take in the first stage
 Counter Stage1Counter = new Counter(720, 450, 60, 25);
