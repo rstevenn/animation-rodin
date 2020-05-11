@@ -133,12 +133,12 @@ void draw(){
   Do_Event();
   Anime_Event();
   MonteCharge.display();
+  Display_Barriere();
   for(int i=0;i<=9;i++){
     if(tableau[i] != null){
       tableau[i].display();
     }
   }
-  Display_Barriere();
  
   click = false;
   /*print("*************************\n");

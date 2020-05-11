@@ -327,7 +327,100 @@ void Anime_Event() {
     break;
 
   case 26: 
+    boolean animated = false;
+    if(tableau[0] != null){
+      if(tableau[0].typeVehicule() == 1 || tableau[0].typeVehicule() == 2){
+        if(tableau[4] == null){
+          tableau[4] = tableau[0];
+          tableau[0] = null;
+          animated = true;
+        }
+        else if(tableau[5] == null){
+          tableau[5] = tableau[0];
+          tableau[0] = null;
+          animated = true;
+        }
+        else if(tableau[6] == null){
+          tableau[6] = tableau[0];
+          tableau[0] = null;
+          animated = true;
+        }
+      }
+
+      else if(tableau[0].typeVehicule() == 3){
+        if(tableau[4] == null){
+          tableau[4] = tableau[0];
+          tableau[0] = null;
+          animated = true;
+        }
+        else if(tableau[5] == null){
+          tableau[5] = tableau[0];
+          tableau[0] = null;
+          animated = true;
+          animated = true;
+        }
+      }
+      else if(tableau[0].typeVehicule() == 4){
+        if(tableau[4] == null){
+          tableau[4] = tableau[0];
+          tableau[0] = null;
+          animated = true;
+        }
+      }
+    }
+    
+    if(tableau[4] != null){
+      if(tableau[4].typeVehicule() == 1 && tableau[4].get_x() < 575){
+        tableau[4].deplace_horizontal_right();
+        animated = true;
+      }
+      else if(tableau[4].typeVehicule() == 2 && tableau[4].get_x() < 575){
+        tableau[4].deplace_horizontal_right();
+        animated = true;
+      }
+      else if(tableau[4].typeVehicule() == 3 && tableau[4].get_x() < 575){
+        tableau[4].deplace_horizontal_right();
+        animated = true;
+      }
+      else if(tableau[4].typeVehicule() == 4 && tableau[4].get_x() < 500){
+        tableau[4].deplace_horizontal_right();
+        animated = true;
+      }
+    }
+    
+    if(tableau[5] != null){
+      if(tableau[5].typeVehicule() == 1 && (tableau[5].get_x() < 475)){
+        tableau[5].deplace_horizontal_right();
+        animated = true;
+      }
+      else if(tableau[5].typeVehicule() == 2 && tableau[5].get_x() < 475){
+        tableau[4].deplace_horizontal_right();
+        animated = true;
+      }
+      else if(tableau[5].typeVehicule() == 3 && tableau[5].get_x() < 425){
+        tableau[5].deplace_horizontal_right();
+        animated = true;
+      }
+    }
+    
+    if(tableau[6] != null){
+      if(tableau[6].typeVehicule() == 1 && tableau[6].get_x() < 375){
+        tableau[6].deplace_horizontal_right();
+        animated = true;
+      }
+      else if(tableau[6].typeVehicule() == 2 && tableau[6].get_x() < 375){
+        tableau[6].deplace_horizontal_right();
+        animated = true;
+      }
+    }
+    
+    if(animated == false){    
+      SelectEvent = 0; 
+      ACTION = false;
+    }
+    
     break;
+  
   case 27: 
     Voie_1_To_Monte_Charge_Rangee2.run_VOIE_1_to_monte_charge_rangee2();
     break;
