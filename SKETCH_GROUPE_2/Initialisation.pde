@@ -535,7 +535,6 @@ void DispawnVoieAnimation(int voie)
 
 void PutVehiculesOnMC(int Slot0, int Slot1, int Slot2, int Slot3) {
   boolean animated = false;
-<<<<<<< HEAD
   if(tableau[Slot0] != null){
     if(tableau[Slot0].typeVehicule() == 1 || tableau[Slot0].typeVehicule() == 2){
       if(tableau[Slot1] == null){
@@ -629,8 +628,7 @@ void PutVehiculesOnMC(int Slot0, int Slot1, int Slot2, int Slot3) {
 }
 
 boolean PutInEtage = false;
-void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){
-  
+void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){  
   boolean animated = false;
   if(tableau[Slot1].get_x() < 800 && PutInEtage == false){
     tableau[Slot1].deplace_horizontal_right();
@@ -678,89 +676,10 @@ void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){
       animated = true;
     }
   }
-  
-  else if(animated == false){    
-    SelectEvent = 0; 
-    ACTION = false;
-    PutInEtage = false;
-=======
-  if (tableau[Slot0] != null) {
-    if (tableau[Slot0].typeVehicule() == 1 || tableau[Slot0].typeVehicule() == 2) {
-      if (tableau[Slot1] == null) {
-        tableau[Slot1] = tableau[Slot0];
-        tableau[Slot0] = null;
-        animated = true;
-      } else if (tableau[Slot2] == null) {
-        tableau[Slot2] = tableau[Slot0];
-        tableau[Slot0] = null;
-        animated = true;
-      } else if (tableau[Slot3] == null) {
-        tableau[Slot3] = tableau[Slot0];
-        tableau[Slot0] = null;
-        animated = true;
-      }
-    } else if (tableau[Slot0].typeVehicule() == 3) {
-      if (tableau[Slot1] == null) {
-        tableau[Slot1] = tableau[Slot0];
-        tableau[Slot0] = null;
-        animated = true;
-      } else if (tableau[Slot2] == null) {
-        tableau[Slot2] = tableau[Slot0];
-        tableau[Slot0] = null;
-        animated = true;
-        animated = true;
-      }
-    } else if (tableau[Slot0].typeVehicule() == 4) {
-      if (tableau[Slot1] == null) {
-        tableau[Slot1] = tableau[Slot0];
-        tableau[Slot0] = null;
-        animated = true;
-      }
-    }
-  }
-
-  if (tableau[Slot1] != null) {
-    if (tableau[Slot1].typeVehicule() == 1 && tableau[Slot1].get_x() < 605) {
-      tableau[Slot1].deplace_horizontal_right();
-      animated = true;
-    } else if (tableau[Slot1].typeVehicule() == 2 && tableau[Slot1].get_x() < 605) {
-      tableau[Slot1].deplace_horizontal_right();
-      animated = true;
-    } else if (tableau[Slot1].typeVehicule() == 3 && tableau[Slot1].get_x() < 600) {
-      tableau[Slot1].deplace_horizontal_right();
-      animated = true;
-    } else if (tableau[Slot1].typeVehicule() == 4 && tableau[Slot1].get_x() < 600) {
-      tableau[Slot1].deplace_horizontal_right();
-      animated = true;
-    }
-  }
-
-  if (tableau[Slot2] != null) {
-    if (tableau[Slot2].typeVehicule() == 1 && ((tableau[Slot2].get_x() < 555 && tableau[Slot1].typeVehicule() == 1) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))) {
-      tableau[Slot2].deplace_horizontal_right();
-      animated = true;
-    } else if (tableau[Slot2].typeVehicule() == 2 && tableau[Slot2].get_x() < 555) {
-      tableau[Slot2].deplace_horizontal_right();
-      animated = true;
-    } else if (tableau[Slot2].typeVehicule() == 3 && tableau[Slot2].get_x() < 550) {
-      tableau[Slot2].deplace_horizontal_right();
-      animated = true;
-    }
-  }
-
-  if (tableau[Slot3] != null) {
-    if (tableau[Slot3].typeVehicule() == 1 && tableau[Slot3].get_x() < 505) {
-      tableau[Slot3].deplace_horizontal_right();
-      animated = true;
-    } else if (tableau[Slot3].typeVehicule() == 2 && tableau[Slot3].get_x() < 505) {
-      tableau[Slot3].deplace_horizontal_right();
-      animated = true;
-    }
-  }
 
   if (animated == false) {    
     SelectEvent = 0; 
     ACTION = false;
->>>>>>> c59c726bd8cd41ee3859696376966dd21b0f0468
+    animated = false;
   }
 }
