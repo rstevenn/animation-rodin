@@ -596,11 +596,11 @@ void PutVehiculesOnMC(int Slot0, int Slot1, int Slot2, int Slot3) {
   }
   
   if(tableau[Slot2] != null){
-    if(tableau[Slot2].typeVehicule() == 1 && ((tableau[Slot2].get_x() < 555 && tableau[Slot1].typeVehicule() == 1) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
+    if(tableau[Slot2].typeVehicule() == 1 && ((tableau[Slot2].get_x() < 555 && (tableau[Slot1].typeVehicule() == 1 || tableau[Slot1].typeVehicule() == 2)) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
       tableau[Slot2].deplace_horizontal_right();
       animated = true;
     }
-    else if(tableau[Slot2].typeVehicule() == 2 && tableau[Slot2].get_x() < 555){
+    else if(tableau[Slot2].typeVehicule() == 2 && ((tableau[Slot2].get_x() < 555 && (tableau[Slot1].typeVehicule() == 1 || tableau[Slot1].typeVehicule() == 2)) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
       tableau[Slot2].deplace_horizontal_right();
       animated = true;
     }
@@ -663,11 +663,11 @@ void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){
   }
   
   else if(tableau[Slot2] != null){
-    if(tableau[Slot2].typeVehicule() == 1 && ((tableau[Slot2].get_x() < 555 && tableau[Slot1].typeVehicule() == 1) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
+    if(tableau[Slot2].typeVehicule() == 1 && ((tableau[Slot2].get_x() < 555 && (tableau[Slot1].typeVehicule() == 1 || tableau[Slot1].typeVehicule() == 2)) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
       tableau[Slot2].deplace_horizontal_right();
       animated = true;
     }
-    else if(tableau[Slot2].typeVehicule() == 2 && tableau[Slot2].get_x() < 555){
+    else if(tableau[Slot2].typeVehicule() == 2 && ((tableau[Slot2].get_x() < 555 && (tableau[Slot1].typeVehicule() == 1 || tableau[Slot1].typeVehicule() == 2)) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
       tableau[Slot2].deplace_horizontal_right();
       animated = true;
     }
