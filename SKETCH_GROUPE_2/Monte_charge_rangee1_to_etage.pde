@@ -23,7 +23,6 @@ class Monte_charge_rangee1_to_etage{
 			N_slot_full_rangee1 = new Integer(N_slot_full_rangee1_tmp - 1);
 			Monte_charge_rangee1 = (Monte_charge_rangee1_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(N_slot_full_rangee1_tmp, none))));
 			target_etage_rangee1 = (target_etage_rangee1_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(N_slot_full_rangee1_tmp,0))));
-			Barriere_etage = (Barriere_etage_tmp.override(new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(Temporary_target_1,false))));
 			System.out.println("Monte_charge_rangee1_to_etage executed ");
 		}
 	}
