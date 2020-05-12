@@ -114,6 +114,9 @@ Counter Stage1Counter = new Counter(720, 450, 60, 25);
 Counter Stage2Counter = new Counter(720, 350, 60, 25);
 Counter Stage3Counter = new Counter(720, 250, 60, 25);
 
+// target etage
+TargetStage Tstage = new TargetStage(475, 675);
+
 //Setup the size of the sketch.
 void setup (){
   size(1200, 825);
@@ -144,6 +147,7 @@ void draw(){
   Do_Event();
   Anime_Event();
   MonteCharge.display();
+  Tstage.display();
   Display_Barriere();
 
   for(int i=0;i<=9;i++){
