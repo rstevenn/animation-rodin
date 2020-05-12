@@ -28,7 +28,31 @@ void Decor() {
   line(600, 400, 650, 400);
   line(600, 500, 650, 500);
   
+  // ferry
+  fill(#ff0000);
+  noStroke();
+  triangle(650, 500, 800, 500, 800, 600);
+  rect(800, 500, 1000, 100);
+  fill(125);
+  rect(800, 200, 1000, 300);
+  
+  fill(100);
+  rect(675, 50, 200, 150);
+  
+  fill(#2255ff);
+  rect(800, 100, 50, 50);
+  rect(700, 100, 50, 50);
+  
+  for (int i = 900; i < 1100; i+=50)
+  {
+    ellipse(i, 450, 30, 30);
+    ellipse(i, 350, 30, 30);
+    ellipse(i, 250, 30, 30);
+  }
+  
+  
    // capteur 
+   stroke(255);
   rectMode(CORNER);
   
   //capteur voies

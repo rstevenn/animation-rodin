@@ -88,7 +88,7 @@ Button ButtonEvacuateV2 = new Button(125,580,70,25,"Evacuate V2",0,128,0,4);
 Button ButtonHandleV1 = new Button(300,375,70,25,"Handle V1",0,128,0,5);
 Button ButtonHandleV2 = new Button(300,525,70,25,"Handle V2",0,128,0,6);
 Button ButtonMCR1toF = new Button(725, 175,70,25,"MCR1 > Floor",0,128,0,7);
-Button ButtonMCR2toF = new Button(725, 125,70,25,"MCR2 > Floor",0,128,0,8);
+Button ButtonMCR2toF = new Button(725, 155,70,25,"MCR2 > Floor",0,128,0,8);
 Button ButtonMoveMCtoF1 = new Button(850,425,70,25,"MC=Floor1",0,128,0,9);
 Button ButtonMoveMCtoF2 = new Button(850,325,70,25,"MC=Floor2",0,128,0,10);
 Button ButtonMoveMCtoF3 = new Button(850,225,70,25,"MC=Floor3",0,128,0,11);
@@ -133,7 +133,7 @@ void draw(){
   for(int i=0;i<825;i+=25){
     stroke(25); 
     line(0,i,1200,i);
-    stroke(0, 0, 40);
+    stroke(0, 0, 0);
     line(600,i,1200,i);
     
   }
@@ -163,8 +163,8 @@ void draw(){
     line(i,0,i,825);
   }
 
-  Display_button();
   Decor();
+  Display_button();
   Do_Event();
   Anime_Event();
   MonteCharge.display();
