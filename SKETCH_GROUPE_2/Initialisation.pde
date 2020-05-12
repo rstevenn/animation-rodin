@@ -628,7 +628,7 @@ void PutVehiculesOnMC(int Slot0, int Slot1, int Slot2, int Slot3) {
 }
 
 boolean PutInEtage = false;
-void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){  
+void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){ 
   boolean animated = false;
   if(tableau[Slot1] != null && tableau[Slot1].get_x() < 800 && PutInEtage == false){
     tableau[Slot1].deplace_horizontal_right();
@@ -643,7 +643,7 @@ void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){
     PutInEtage = true;
   }
   
-  else if(tableau[Slot1] != null){
+  if(tableau[Slot1] != null){
     if(tableau[Slot1].typeVehicule() == 1 && tableau[Slot1].get_x() < 605){
       tableau[Slot1].deplace_horizontal_right();
       animated = true;
@@ -662,7 +662,7 @@ void PutVehiculesOnEtage(int Slot1,int Slot2,int Slot3){
     }
   }
   
-  else if(tableau[Slot2] != null){
+  if(tableau[Slot2] != null){
     if(tableau[Slot2].typeVehicule() == 1 && ((tableau[Slot2].get_x() < 555 && (tableau[Slot1].typeVehicule() == 1 || tableau[Slot1].typeVehicule() == 2)) || (tableau[Slot2].get_x() < 505 && tableau[Slot1].typeVehicule() == 3))){
       tableau[Slot2].deplace_horizontal_right();
       animated = true;
