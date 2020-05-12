@@ -129,18 +129,37 @@ void setup (){
 void draw(){  
   //draw graphical elements.
   background(0);
-  stroke(25);
+
   for(int i=0;i<825;i+=25){
+    stroke(25); 
     line(0,i,1200,i);
+    stroke(0, 0, 50);
+    line(600,i,1200,i);
+    
   }
   for(int i=0;i<1200;i+=25){
+     if (i < 600)
+    {
+     stroke(25); 
+    }else{
+      stroke(0, 0, 50);
+    }
     line(i,0,i,825);
   }
-  stroke(70);
+
   for(int i=0;i<825;i+=50){
+    stroke(70); 
     line(0,i,1200,i);
+    stroke(0, 0, 100);
+    line(600,i,1200,i);
   }
   for(int i=0;i<1200;i+=50){
+    if (i < 600)
+    {
+     stroke(70); 
+    }else{
+      stroke(0, 0, 100);
+    }
     line(i,0,i,825);
   }
 
