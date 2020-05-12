@@ -133,7 +133,7 @@ void draw(){
   for(int i=0;i<825;i+=25){
     stroke(25); 
     line(0,i,1200,i);
-    stroke(0, 0, 50);
+    stroke(0, 0, 40);
     line(600,i,1200,i);
     
   }
@@ -142,7 +142,7 @@ void draw(){
     {
      stroke(25); 
     }else{
-      stroke(0, 0, 50);
+      stroke(0, 0, 40);
     }
     line(i,0,i,825);
   }
@@ -150,7 +150,7 @@ void draw(){
   for(int i=0;i<825;i+=50){
     stroke(70); 
     line(0,i,1200,i);
-    stroke(0, 0, 100);
+    stroke(0, 0, 75);
     line(600,i,1200,i);
   }
   for(int i=0;i<1200;i+=50){
@@ -158,7 +158,7 @@ void draw(){
     {
      stroke(70); 
     }else{
-      stroke(0, 0, 100);
+      stroke(0, 0, 75);
     }
     line(i,0,i,825);
   }
