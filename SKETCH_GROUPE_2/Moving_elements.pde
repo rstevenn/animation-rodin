@@ -48,7 +48,17 @@ class Moving_elements {
   }
 
   void display_green() {
-    fill(#44ff00); 
+    fill(#00ff00); 
+    stroke(255); 
+    rectMode(CENTER); 
+    rect(x, y, width, height);
+    fill(255); 
+    textAlign(CENTER, CENTER); 
+    text(text, x, y, width, height);
+  }
+  
+  void display_red() {
+    fill(#ff0000); 
     stroke(255); 
     rectMode(CENTER); 
     rect(x, y, width, height);

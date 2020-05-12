@@ -242,7 +242,6 @@ void Anime_Event() {
       BBackMonteCharge.deplace_vertical_down();
       CapteurBFront.deplace_vertical_down();
       CapteurBBack.deplace_vertical_down();
-      CapteurMonteCharge.deplace_vertical_down();
 
       for (int i = 4; i < 10; i++)
       {
@@ -266,7 +265,6 @@ void Anime_Event() {
       BBackMonteCharge.deplace_vertical_up();
       CapteurBFront.deplace_vertical_up();
       CapteurBBack.deplace_vertical_up();
-      CapteurMonteCharge.deplace_vertical_up();
 
       for (int i = 4; i < 10; i++)
       {
@@ -283,7 +281,6 @@ void Anime_Event() {
       BBackMonteCharge.deplace_vertical_down();
       CapteurBFront.deplace_vertical_down();
       CapteurBBack.deplace_vertical_down();
-      CapteurMonteCharge.deplace_vertical_down();
 
       for (int i = 4; i < 10; i++)
       {
@@ -306,7 +303,6 @@ void Anime_Event() {
       BBackMonteCharge.deplace_vertical_up();
       CapteurBFront.deplace_vertical_up();
       CapteurBBack.deplace_vertical_up();
-      CapteurMonteCharge.deplace_vertical_up();
 
       for (int i = 4; i < 10; i++)
       {

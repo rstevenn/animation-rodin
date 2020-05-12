@@ -9,9 +9,8 @@ Moving_Vehicules tableau[] = new Moving_Vehicules[15];
 Moving_elements MonteCharge = new Moving_elements(525, 450, 1, 150, 100, "");
 Moving_elements BFrontMonteCharge = new Moving_elements(450, 450, 1, 6, 100, "", 150);
 Moving_elements BBackMonteCharge = new Moving_elements(600, 450, 1, 6, 100, "", 150);
-Moving_elements CapteurBFront = new Moving_elements(462,388, 1, 25, 25, "");
-Moving_elements CapteurBBack = new Moving_elements(587, 388, 1, 25, 25, "");
-Moving_elements CapteurMonteCharge = new Moving_elements(525, 388, 1, 25, 25, "");
+Moving_elements CapteurBFront = new Moving_elements(462,403, 1, 25, 5, "");
+Moving_elements CapteurBBack = new Moving_elements(587, 403, 1, 25, 5, "");
 Moving_elements BEtage1 = new Moving_elements(625, 450, 1, 6, 100, "", 150);
 Moving_elements BEtage2 = new Moving_elements(625, 350, 1, 6, 100, "", 150);
 Moving_elements BEtage3 = new Moving_elements(625, 250, 1, 6, 100, "", 150);
@@ -146,13 +145,26 @@ void draw(){
   }
 
   Display_button();
-  CapteurBFront.display();
-  CapteurBBack.display();
-  CapteurMonteCharge.display_green();
   Decor();
   Do_Event();
   Anime_Event();
   MonteCharge.display();
+  
+  if (Capteur_monte_charge_1 == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
+  {
+   CapteurBFront.display_green();
+  } else{
+   CapteurBFront.display_red();
+  }
+  
+  if (Capteur_monte_charge_2 == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
+  {
+   CapteurBBack.display_green();
+  } else{
+   CapteurBBack.display_red();
+  }
+  
+
   Tstage.display();
   Display_Barriere();
 

@@ -14,4 +14,5 @@ void DecorRoof(){
   Stage1Counter.display(Etages.apply(1));
   Stage2Counter.display(Etages.apply(2));
   Stage3Counter.display(Etages.apply(3));
+ 
 }

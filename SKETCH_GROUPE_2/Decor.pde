@@ -28,9 +28,42 @@ void Decor() {
   line(600, 400, 650, 400);
   line(600, 500, 650, 500);
   
-  // capteur 
-  fill(0);
-  rect(625, 200, 25, 25); //capteur etage1
-  rect(625, 300, 25, 25); //capteur etage2
-  rect(625, 400, 25, 25); //capteur etage3
+   // capteur 
+  rectMode(CORNER);
+  
+  //capteur voies
+  if (Capteur_arrive == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
+  {
+   fill(#00ff00); 
+  } else{
+   fill(#ff0000);
+  }
+  rect(425, 400, 25, 5); 
+  
+  //capteur etage3
+  if (Capteur_etages.apply(3) == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
+  {
+   fill(#00ff00); 
+  } else{
+   fill(#ff0000);
+  }
+  rect(600, 200, 25, 5); 
+  
+  //capteur etage2
+  if (Capteur_etages.apply(2) == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
+  {
+   fill(#00ff00); 
+  } else{
+   fill(#ff0000);
+  }
+  rect(600, 300, 25, 5); 
+  
+  //capteur etage1
+  if (Capteur_etages.apply(1) == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
+  {
+   fill(#00ff00); 
+  } else{
+   fill(#ff0000);
+  }
+  rect(600, 400, 25, 5); 
 } 
