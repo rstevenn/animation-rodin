@@ -1,7 +1,7 @@
 class Monte_charge_rangee2_to_etage{
   
   boolean guard_Monte_charge_rangee2_to_etage() {
-		return ((!N_slot_full_rangee2.equals(new Integer(0))) && (!Test_full_rangee2.equals(new Integer(0))) && (NAT.instance.has(new Integer(Test_full_rangee2 - value_vehicules.apply(Monte_charge_rangee2.apply(N_slot_full_rangee2))))) && (target_etage_rangee2.apply(N_slot_full_rangee2).equals(Monte_charge_etage))  && (Barriere_monte_charge.apply(Monte_charge_etage).equals(true)) &&  Barriere_etage.apply(Monte_charge_etage).equals(true) && (NAT.instance.has(Temporary_target_2)));
+		return ((!N_slot_full_rangee2.equals(new Integer(0))) && (!Test_full_rangee2.equals(new Integer(0))) && (NAT.instance.has(new Integer(Test_full_rangee2 - value_vehicules.apply(Monte_charge_rangee2.apply(N_slot_full_rangee2))))) && (target_etage_rangee2.apply(N_slot_full_rangee2).equals(Monte_charge_etage))  && (Barriere_monte_charge.apply(2).equals(true)) &&  Barriere_etage.apply(Monte_charge_etage).equals(true) && (NAT.instance.has(Temporary_target_2)));
 	}
   //same bug here the MCR1
 
@@ -18,6 +18,7 @@ class Monte_charge_rangee2_to_etage{
 			N_slot_full_rangee2 = new Integer(N_slot_full_rangee2_tmp - 1);
 			Monte_charge_rangee2 = (Monte_charge_rangee2_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(N_slot_full_rangee2_tmp, none))));
 			target_etage_rangee2 = (target_etage_rangee2_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(N_slot_full_rangee2_tmp,0))));
+			Barriere_etage = (Barriere_etage_tmp.override(new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(Temporary_target_2,false))));
 			System.out.println("Monte_charge_rangee2_to_etage executed ");
 		}
 	}
