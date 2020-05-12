@@ -169,6 +169,11 @@ void draw(){
   Anime_Event();
   MonteCharge.display();
   
+  PImage image = loadImage("RODIN_CORP.png");
+  imageMode(CENTER);
+  image(image, MonteCharge.get_x(), MonteCharge.get_y(), 99, 54);
+  
+  
   if (Capteur_monte_charge_1 == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
   {
    CapteurBFront.display_green();
