@@ -1,7 +1,5 @@
 class HANDLE_BORNE_2{
   
-  HANDLE_BORNE_2(){print("HANDLE_BORNE_2 created\n");}
-  
 	boolean guard_HANDLE_BORNE_2() {
 		return (Borne_2.equals(false) && 
             !Voie_arrive_2.apply(new Integer(0)).equals(none) &&
@@ -18,12 +16,19 @@ class HANDLE_BORNE_2{
 	}
 
 	void run_HANDLE_BORNE_2(){
-		if(guard_HANDLE_BORNE_2()) {
-			Integer Temporary_target_2_tmp = Temporary_target_2;
-			Borne_2 = true;
-			Temporary_target_2 = choose_target.apply(new Integer(scoring_full_etage1.apply(new Integer(Virtual_etages.apply(1) + value_vehicules.apply(Voie_arrive_2.apply(0)))) + scoring_full_etage2.apply(new Integer(Virtual_etages.apply(2) + value_vehicules.apply(Voie_arrive_2.apply(0)))) + scoring_type_vehicule.apply(Voie_arrive_2.apply(0))));
-			Barriere_voie2 = true;
-			System.out.println("HANDLE_BORNE_2 executed ");
-		}
-	}
+    if (ACTION == false && SelectEvent == 6){
+      if(guard_HANDLE_BORNE_2()){
+        Integer Temporary_target_2_tmp = Temporary_target_2;
+        Borne_2 = true;
+        Temporary_target_2 = choose_target.apply(new Integer(scoring_full_etage1.apply(new Integer(Virtual_etages.apply(1) + value_vehicules.apply(Voie_arrive_2.apply(0)))) + scoring_full_etage2.apply(new Integer(Virtual_etages.apply(2) + value_vehicules.apply(Voie_arrive_2.apply(0)))) + scoring_type_vehicule.apply(Voie_arrive_2.apply(0))));
+        Barriere_voie2 = true;
+        System.out.println("HANDLE_BORNE_2 executed ");
+        ACTION = true;
+      }
+    }
+    else if (ACTION == true && SelectEvent == 6){
+      SelectEvent = 0; 
+      ACTION = false;
+    }
+  }
 }

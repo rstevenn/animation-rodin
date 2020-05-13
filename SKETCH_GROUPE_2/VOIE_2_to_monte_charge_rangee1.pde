@@ -5,22 +5,34 @@ public class VOIE_2_to_monte_charge_rangee1{
 	}
 
 	public void run_VOIE_2_to_monte_charge_rangee1(){
-		if(guard_VOIE_2_to_monte_charge_rangee1()) {
-			BRelation<Integer,Integer> Monte_charge_rangee1_tmp = Monte_charge_rangee1;
-			BRelation<Integer,Integer> Voie_arrive_2_tmp = Voie_arrive_2;
-			Integer Test_full_rangee1_tmp = Test_full_rangee1;
-			Integer N_slot_full_rangee1_tmp = N_slot_full_rangee1;
-			BRelation<Integer,Integer> target_etage_rangee1_tmp = target_etage_rangee1;
-			BRelation<Integer,Integer> Virtual_etages_tmp = Virtual_etages;
-			Monte_charge_rangee1 = ((new BRelation<Integer,Integer>(new Pair<Integer,Integer>(1,Voie_arrive_2_tmp.apply(0))).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(2,Monte_charge_rangee1_tmp.apply(1))).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(3,Monte_charge_rangee1_tmp.apply(2)))))));
-			Voie_arrive_2 = Voie_arrive_2_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,none)));
-			Borne_2 = false;
-			Barriere_voie2 = false;
-			Test_full_rangee1 = new Integer(Test_full_rangee1_tmp +value_vehicules.apply(Voie_arrive_2_tmp.apply(0)));
-			N_slot_full_rangee1 = new Integer(N_slot_full_rangee1_tmp + 1);
-			target_etage_rangee1 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(1,Temporary_target_2)).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(2,target_etage_rangee1_tmp.apply(1))).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(3,target_etage_rangee1_tmp.apply(2)))));
-			Virtual_etages = Virtual_etages_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(Temporary_target_2,new Integer(Virtual_etages_tmp.apply(Temporary_target_2) + value_vehicules.apply(Voie_arrive_2_tmp.apply(0))))));
-			System.out.println("VOIE_2_to_monte_charge_rangee1 executed ");
-		}
-	}
+    if (ACTION == false && SelectEvent == 28){
+      if(guard_VOIE_2_to_monte_charge_rangee1()){
+        BRelation<Integer,Integer> Monte_charge_rangee1_tmp = Monte_charge_rangee1;
+        BRelation<Integer,Integer> Voie_arrive_2_tmp = Voie_arrive_2;
+        Integer Test_full_rangee1_tmp = Test_full_rangee1;
+        Integer N_slot_full_rangee1_tmp = N_slot_full_rangee1;
+        BRelation<Integer,Integer> target_etage_rangee1_tmp = target_etage_rangee1;
+        BRelation<Integer,Integer> Virtual_etages_tmp = Virtual_etages;
+        Monte_charge_rangee1 = ((new BRelation<Integer,Integer>(new Pair<Integer,Integer>(1,Voie_arrive_2_tmp.apply(0))).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(2,Monte_charge_rangee1_tmp.apply(1))).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(3,Monte_charge_rangee1_tmp.apply(2)))))));
+        Voie_arrive_2 = Voie_arrive_2_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,none)));
+        Borne_2 = false;
+        Barriere_voie2 = false;
+        Test_full_rangee1 = new Integer(Test_full_rangee1_tmp +value_vehicules.apply(Voie_arrive_2_tmp.apply(0)));
+        N_slot_full_rangee1 = new Integer(N_slot_full_rangee1_tmp + 1);
+        target_etage_rangee1 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(1,Temporary_target_2)).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(2,target_etage_rangee1_tmp.apply(1))).union(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(3,target_etage_rangee1_tmp.apply(2)))));
+        Virtual_etages = Virtual_etages_tmp.override(new BRelation<Integer,Integer>(new Pair<Integer,Integer>(Temporary_target_2,new Integer(Virtual_etages_tmp.apply(Temporary_target_2) + value_vehicules.apply(Voie_arrive_2_tmp.apply(0))))));
+        System.out.println("VOIE_2_to_monte_charge_rangee1 executed ");
+        ACTION = true;
+      }
+    }
+    else if (ACTION == true && SelectEvent == 28){
+      if (tableau[1] != null && tableau[1].get_x() < 400) {
+        tableau[1].deplace_horizontal_right();
+      } else if (tableau[1] != null && tableau[1].get_y() > 425) {
+        tableau[1].deplace_vertical_up();
+      } else {
+        PutVehiculesOnMC(1, 4, 5, 6);
+      }
+    }
+  }
 }

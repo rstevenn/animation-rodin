@@ -7,12 +7,17 @@ class EVACUATE_VOIE_2{
 	}
 
 	void run_EVACUATE_VOIE_2(){
-		if(guard_EVACUATE_VOIE_2()) {
-			BRelation<Integer,Integer> Voie_arrive_2_tmp = Voie_arrive_2;
-			Voie_de_sortie_2 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,Voie_arrive_2_tmp.apply(0)));
-			Voie_arrive_2 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,none));
-			System.out.println("EVACUATE_VOIE_2 executed ");
-		}
-	}
-
+    if (ACTION == false && SelectEvent == 4){
+      if(guard_EVACUATE_VOIE_2()){
+        BRelation<Integer,Integer> Voie_arrive_2_tmp = Voie_arrive_2;
+        Voie_de_sortie_2 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,Voie_arrive_2_tmp.apply(0)));
+        Voie_arrive_2 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,none));
+        System.out.println("EVACUATE_VOIE_2 executed ");
+        ACTION = true;
+      }
+    }
+    else if (ACTION == true && SelectEvent == 4){
+      EvacuateVoieAnimation(2);
+    }
+  }
 }

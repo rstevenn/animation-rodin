@@ -7,9 +7,15 @@ class DISPAWN_VEHICULE_VOIE_1{
   }
 
   void run_DISPAWN_VEHICULE_VOIE_1(){
-    if(guard_DISPAWN_VEHICULE_VOIE_1()) {
-      Voie_de_sortie_1 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,none));
-      System.out.println("DISPAWN_VEHICULE_VOIE_1 executed ");
+    if (ACTION == false && SelectEvent == 1){
+      if(guard_DISPAWN_VEHICULE_VOIE_1()){
+        Voie_de_sortie_1 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,none));
+        System.out.println("DISPAWN_VEHICULE_VOIE_1 executed ");
+        ACTION = true;
+      }
+    }
+    else if (ACTION == true && SelectEvent == 1){
+      DispawnVoieAnimation(1);
     }
   }
 }

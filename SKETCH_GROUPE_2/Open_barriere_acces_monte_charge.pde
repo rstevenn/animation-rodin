@@ -5,9 +5,16 @@ class Open_barriere_acces_monte_charge{
 	}
 
   void run_Open_barriere_acces_monte_charge(){
-		if(guard_Open_barriere_acces_monte_charge()) {
-			Barriere_acces_monte_charge = true;
-			System.out.println("Open_barriere_acces_monte_charge executed ");
+    if (ACTION == false && SelectEvent == 12){
+  		if(guard_Open_barriere_acces_monte_charge()) {
+  			Barriere_acces_monte_charge = true;
+  			System.out.println("Open_barriere_acces_monte_charge executed ");
+        ACTION = true;
+      }
+    }
+    else if (ACTION == true && SelectEvent == 12){
+      SelectEvent = 0; 
+      ACTION = false;
 		}
-	}
+  }
 }

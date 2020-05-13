@@ -87,8 +87,8 @@ Button ButtonEvacuateV1 = new Button(125,315,70,25,"Evacuate V1",0,128,0,3);
 Button ButtonEvacuateV2 = new Button(125,580,70,25,"Evacuate V2",0,128,0,4);
 Button ButtonHandleV1 = new Button(300,375,70,25,"Handle V1",0,128,0,5);
 Button ButtonHandleV2 = new Button(300,525,70,25,"Handle V2",0,128,0,6);
-Button ButtonMCR1toF = new Button(725, 175,70,25,"MCR1 > Floor",0,128,0,7);
-Button ButtonMCR2toF = new Button(725, 155,70,25,"MCR2 > Floor",0,128,0,8);
+Button ButtonMCR1toF = new Button(725, 155,70,25,"MCR1 > Floor",0,128,0,7);
+Button ButtonMCR2toF = new Button(725, 185,70,25,"MCR2 > Floor",0,128,0,8);
 Button ButtonMoveMCtoF1 = new Button(850,425,70,25,"MC=Floor1",0,128,0,9);
 Button ButtonMoveMCtoF2 = new Button(850,325,70,25,"MC=Floor2",0,128,0,10);
 Button ButtonMoveMCtoF3 = new Button(850,225,70,25,"MC=Floor3",0,128,0,11);
@@ -117,11 +117,11 @@ Counter Stage2Counter = new Counter(720, 350, 60, 25);
 Counter Stage3Counter = new Counter(720, 250, 60, 25);
 
 // target etage
-TargetStage Tstage = new TargetStage(475, 675);
+TargetStage Tstage = new TargetStage(425, 675);
 
 //Setup the size of the sketch.
 void setup (){
-  size(1200, 650);
+  size(1200, 825);
   Init_Machine();
 }
 
@@ -166,10 +166,7 @@ void draw(){
   Decor();
   Display_button();
   Do_Event();
-  Anime_Event();
   MonteCharge.display();
- 
-  
   
   if (Capteur_monte_charge_1 == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
   {

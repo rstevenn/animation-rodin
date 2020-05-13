@@ -5,10 +5,21 @@ class Open_barriere_monte_charge{
 	}
 
 	void run_Open_barriere_monte_charge( Integer Value){
-		if(guard_Open_barriere_monte_charge(Value)) {
-			BRelation<Integer,Boolean> Barriere_monte_charge_tmp = Barriere_monte_charge;
-			Barriere_monte_charge = (Barriere_monte_charge_tmp.override(new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(Value,true))));
-			System.out.println("Open_barriere_monte_charge executed Value: " + Value + " ");
-		}
-	}
+    if (ACTION == false && (SelectEvent == 13 || SelectEvent == 14)){
+      if(guard_Open_barriere_monte_charge(Value)){
+        BRelation<Integer,Boolean> Barriere_monte_charge_tmp = Barriere_monte_charge;
+        Barriere_monte_charge = (Barriere_monte_charge_tmp.override(new BRelation<Integer,Boolean>(new Pair<Integer,Boolean>(Value,true))));
+        System.out.println("Open_barriere_monte_charge executed Value: " + Value + " ");
+        ACTION = true;
+      }
+    }
+    else if (ACTION == true && SelectEvent == 13){
+      SelectEvent = 0; 
+      ACTION = false; 
+    }
+    else if (ACTION == true && SelectEvent == 14){
+      SelectEvent = 0; 
+      ACTION = false;
+    }
+  }
 }
