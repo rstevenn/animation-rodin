@@ -40,7 +40,7 @@ void Decor() {
   
   fill(#2255ff);
   
-  for (int i = 900; i < 1100; i+=50)
+  for (int i = 900; i < 1300; i+=50)
   {
     ellipse(i, 450, 30, 30);
     ellipse(i, 350, 30, 30);

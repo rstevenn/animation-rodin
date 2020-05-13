@@ -1,7 +1,7 @@
 // The machine EVACUATE_VOIE_1 that handle the evacuate event
 class EVACUATE_VOIE_1{
 
-  EVACUATE_VOIE_1(){print("EVACUATE_VOIE_1 created\n");}
+  EVACUATE_VOIE_1(){}
   
   boolean guard_EVACUATE_VOIE_1() {
     // check if the conditon for the event is ok

@@ -1,7 +1,7 @@
 // The machine DISPAWN_VEHICULE_VOIE_2 that handle the dispawn event
 class DISPAWN_VEHICULE_VOIE_2{
 
-  DISPAWN_VEHICULE_VOIE_2(){print("DISPAWN_VEHICULE_VOIE_2 created\n");}
+  DISPAWN_VEHICULE_VOIE_2(){}
   
   boolean guard_DISPAWN_VEHICULE_VOIE_2() {
     // check if the condition for the event is ok

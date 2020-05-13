@@ -1,7 +1,7 @@
 // The machine HANDLE_BORNE_1 that handle the behavior of the terminale event
 class HANDLE_BORNE_1{
   
-  HANDLE_BORNE_1(){print("HANDLE_BORNE_1 created\n");}
+  HANDLE_BORNE_1(){}
   
 	boolean guard_HANDLE_BORNE_1() {
     // check if the condition of the event is ok

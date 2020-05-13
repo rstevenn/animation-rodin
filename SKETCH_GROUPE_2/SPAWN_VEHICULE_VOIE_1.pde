@@ -1,7 +1,7 @@
 // The machine SPAWN_VEHICULE_VOIE_1 that handle the spawn event
 class SPAWN_VEHICULE_VOIE_1{
   
-  SPAWN_VEHICULE_VOIE_1(){print("SPAWN_VEHICULE_VOIE_1 created\n");}
+  SPAWN_VEHICULE_VOIE_1(){}
   
   boolean guard_SPAWN_VEHICULE_VOIE_1(Integer vehicule_type) {
     // check the conditon of the event

@@ -1,6 +1,6 @@
 // The machine HANDLE_BORNE_2 that handle the behavior of the terminale event
 class HANDLE_BORNE_2{
-  
+
 	boolean guard_HANDLE_BORNE_2() {
     // check if the condition of the event is ok
 		return (Borne_2.equals(false) && 

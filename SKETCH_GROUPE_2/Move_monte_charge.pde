@@ -6,7 +6,7 @@ class Move_monte_charge{
            && Value != Monte_charge_etage);
 	  }
 
-	void run_Move_monte_charge(Integer Value){4
+	void run_Move_monte_charge(Integer Value){
   // check the condition of the event
     if (ACTION == false && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)){
       if(guard_Move_monte_charge(Value)){
