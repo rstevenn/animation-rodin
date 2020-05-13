@@ -1,4 +1,5 @@
 void DecorRoof(){
+  // draw the last layer of decor
   stroke(255);
   fill(0);
   pushStyle();

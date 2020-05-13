@@ -24,6 +24,18 @@ class Button{
   newB: Blue for RGB (integer).
   */
   Button(int newX, int newY, int newWidth, int newHeight, String newText,int newR, int newG, int newB, int newEvent){
+    /*
+    int newX the x position
+    int newY the y position
+    int newWidth the width of the object
+    int newHeight the Heugth of the object
+    String newText the text inside the element
+    int newR the red value of the element
+    int newG the green value of the element
+    int newB the blue value of the element
+    int newEvent the event number
+    
+    */
     x = newX;
     y = newY;
     width = newWidth;
@@ -37,6 +49,10 @@ class Button{
 
 //Fonction to display button.
   void display(boolean guard){
+    /*
+    display the button
+    boolean guard: the booléan status ogf the guard correspoding to the evenment number
+    */
     if (this.checkPos() && guard && ACTION == false){
       fill(r,g,b); stroke(248,219,27); rectMode(CENTER); rect(x,y,width,height);
       fill(255); textAlign(CENTER, CENTER); text(text,x,y,width,height);
@@ -53,12 +69,17 @@ class Button{
 
 //Fonction to check if the mouse is on the button.
   boolean checkPos(){
+    // check if the mouse is on the button
     if((mouseX < x+(width/2)) && (mouseX > x-(width/2)) && ((mouseY < y+(height/2)) && (mouseY > y-(height/2)))){
       return true;
     } else{return false;}
   }
-  
+//Fonction that disable button when an animation started
   int ButtonClick(boolean guard){
+        /*
+    returnif we clicked the button
+    boolean guard: the booléan status ogf the guard correspoding to the evenment number
+    */
     if(this.checkPos() && (click == true) && (ACTION != true) && (guard == true)){return Event;}
     else {return 0;}
   }

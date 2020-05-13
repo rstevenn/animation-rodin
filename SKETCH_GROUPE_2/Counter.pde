@@ -3,7 +3,7 @@ class Counter{
   int y;
   int width;
   int height;
-  
+  // Create the constructor of the counter
   Counter(int newX, int newY, int newWidth, int newHeight){
     x = newX;
     y = newY;
@@ -13,7 +13,10 @@ class Counter{
 
 //Fonction to display the counters.
   void display(int value){
-      
+      /*
+        display the counter
+        int value: the value of the counter
+      */
       rectMode(CENTER); 
       fill(25); 
       stroke(255, 255, 255);
@@ -25,6 +28,7 @@ class Counter{
   }
 }
 
+// Constructor of target stage in the machine 
 class TargetStage{
   int x;
   int y;
@@ -35,6 +39,13 @@ class TargetStage{
   }
 
   void display(){
+      /*
+  Parameters:
+  -----------
+  newX: X position of the stage (integer).
+  newY: Y position of the stage (integer).*/
+
+  // Fonction to display the current target stage
       
       rectMode(CENTER); 
       fill(25); 

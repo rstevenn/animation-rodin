@@ -1,11 +1,13 @@
+//The machine Monte_charge_rangee2_to_etage that handle the push into a stage
 class Monte_charge_rangee2_to_etage{
   
   boolean guard_Monte_charge_rangee2_to_etage() {
+    // the condition of the event
 		return ((!N_slot_full_rangee2.equals(new Integer(0))) && (!Test_full_rangee2.equals(new Integer(0))) && (NAT.instance.has(new Integer(Test_full_rangee2 - value_vehicules.apply(Monte_charge_rangee2.apply(N_slot_full_rangee2))))) && (target_etage_rangee2.apply(N_slot_full_rangee2).equals(Monte_charge_etage))  && (Barriere_monte_charge.apply(2).equals(true)) &&  Barriere_etage.apply(Monte_charge_etage).equals(true) && (NAT.instance.has(Temporary_target_2)));
 	}
-  //same bug here the MCR1
 
 	void run_Monte_charge_rangee2_to_etage(){
+    // run and animate the event 
     if (ACTION == false && SelectEvent == 8){
       if(guard_Monte_charge_rangee2_to_etage()){
         BRelation<Integer,Integer> Etages_tmp = Etages;

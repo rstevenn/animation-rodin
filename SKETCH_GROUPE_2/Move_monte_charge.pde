@@ -1,3 +1,4 @@
+//The machine Move_monte_charge that handle the mouvement of the freight elevator
 class Move_monte_charge{
   
   boolean guard_Move_monte_charge(Integer Value) {
@@ -5,7 +6,8 @@ class Move_monte_charge{
            && Value != Monte_charge_etage);
 	  }
 
-	void run_Move_monte_charge(Integer Value){
+	void run_Move_monte_charge(Integer Value){4
+  // check the condition of the event
     if (ACTION == false && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)){
       if(guard_Move_monte_charge(Value)){
         Integer Monte_charge_etage_tmp = Monte_charge_etage;
@@ -23,6 +25,7 @@ class Move_monte_charge{
     }
     
     else if (ACTION == true && SelectEvent == 9){
+      // run and animate the event
       if (MonteCharge.get_y() < 450) {
         MonteCharge.deplace_vertical_down();
         BFrontMonteCharge.deplace_vertical_down();

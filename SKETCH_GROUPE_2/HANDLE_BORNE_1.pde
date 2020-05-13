@@ -1,8 +1,10 @@
+// The machine HANDLE_BORNE_1 that handle the behavior of the terminale event
 class HANDLE_BORNE_1{
   
   HANDLE_BORNE_1(){print("HANDLE_BORNE_1 created\n");}
   
 	boolean guard_HANDLE_BORNE_1() {
+    // check if the condition of the event is ok
 		return (Borne_1.equals(false) && (Voie_arrive_1.apply(new Integer(0)) != none) &&
             ((new Integer(Etages.apply(new Integer(1)) + value_vehicules.apply(Voie_arrive_1.apply(new Integer(0))))) <= 6 &&
             !Voie_arrive_1.apply(new Integer(0)).equals(voiture) || 
@@ -17,6 +19,7 @@ class HANDLE_BORNE_1{
   }
 
 	void run_HANDLE_BORNE_1(){
+    // run and animate the event
     if (ACTION == false && SelectEvent == 5){
       if(guard_HANDLE_BORNE_1()){
         Integer Temporary_target_1_tmp = Temporary_target_1;

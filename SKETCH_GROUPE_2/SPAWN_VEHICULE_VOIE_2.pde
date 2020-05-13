@@ -1,12 +1,15 @@
+// The machine SPAWN_VEHICULE_VOIE_2 that handle the spawn event
 class SPAWN_VEHICULE_VOIE_2{
   
   SPAWN_VEHICULE_VOIE_2(){print("SPAWN_VEHICULE_VOIE_2 created\n");}
   
   boolean guard_SPAWN_VEHICULE_VOIE_2(Integer vehicule_type) {
+    // check the condition for teh event
 		return ((Voie_arrive_2.apply(new Integer(0)).equals(none)) && (new BSet<Integer>(voiture,camion1,camion2,camion3).has(vehicule_type)));
 	}
 
 	void run_SPAWN_VEHICULE_VOIE_2( Integer vehicule_type){
+  // animate and run the event
     if (ACTION == false && (SelectEvent == 22 || SelectEvent == 23 || SelectEvent == 24 || SelectEvent == 25)){
       if(guard_SPAWN_VEHICULE_VOIE_2(vehicule_type)){
         Voie_arrive_2 = new BRelation<Integer,Integer>(new Pair<Integer,Integer>(0,vehicule_type));

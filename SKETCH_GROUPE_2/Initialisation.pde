@@ -1,4 +1,5 @@
 void Init_Machine() {
+  // Initialisation of all variables of the machine
   Voie_arrive_1 = (new BRelation<Integer, Integer>(new Pair<Integer, Integer>(0, none)));
   Voie_arrive_2 = (new BRelation<Integer, Integer>(new Pair<Integer, Integer>(0, none)));
   Voie_de_sortie_1 = (new BRelation<Integer, Integer>(new Pair<Integer, Integer>(0, none)));
@@ -37,6 +38,8 @@ void Init_Machine() {
 }
 
 void Display_button() {
+  //Fonction that display all button
+  // and check if the button is activate
   ButtonDispawnV1.display(Dispawn_Vehicule_Voie_1.guard_DISPAWN_VEHICULE_VOIE_1());
   SelectEvent += ButtonDispawnV1.ButtonClick(Dispawn_Vehicule_Voie_1.guard_DISPAWN_VEHICULE_VOIE_1());
   ButtonDispawnV2.display(Dispawn_Vehicule_Voie_2.guard_DISPAWN_VEHICULE_VOIE_2());
@@ -98,6 +101,7 @@ void Display_button() {
 }
 
 void Do_Event() {
+  // Fonction that execute an event for each button if activate in the previous function
   switch(SelectEvent) {
     case 1: 
       Dispawn_Vehicule_Voie_1.run_DISPAWN_VEHICULE_VOIE_1();
@@ -190,6 +194,7 @@ void Do_Event() {
 }
 
 void Display_Barriere() {
+  // Fonction that display gate depending of the evenet selected and the machine state 
   if ((ACTION == true && (SelectEvent == 26 || SelectEvent ==27 )) || Borne_1 == true) {
     fill(50); 
     noStroke(); 
@@ -268,6 +273,13 @@ void Display_Barriere() {
 }
 
 void SpawnVehiculeAnimation(int voie, int locationX, int locationY, int type) {
+  /*
+  Fonction that handle separetly the spawn vehicule animation
+  int voie: the number of the voie
+  int locationX: the location of the vehicule 
+  int locationY: the location of the vehicule
+  int type: the type of vehicule
+  */
   if (tableau[voie] == null) {
     Moving_Vehicules vehicule = new Moving_Vehicules(-50, locationY, 2, type);
     tableau[voie] = vehicule;
@@ -280,6 +292,8 @@ void SpawnVehiculeAnimation(int voie, int locationX, int locationY, int type) {
 }
 
 void EvacuateVoieAnimation(int voie)
+//Fonction that handle separetly the evacuate vehicle animation
+// int voie: the number of the voie
 {
   if (tableau[voie + 1] == null)
   {
@@ -308,6 +322,8 @@ void EvacuateVoieAnimation(int voie)
 
 void DispawnVoieAnimation(int voie)
 {
+  //Fonction that handle separetly the Dispawn vehicle animation
+  // int voie: the number of the voie
   if (tableau[voie+1].get_y() > 100 && voie == 1)
   {
     tableau[voie+1].deplace_vertical_up();
@@ -323,6 +339,11 @@ void DispawnVoieAnimation(int voie)
 }
 
 void PutVehiculesOnMC(int Slot0, int Slot1, int Slot2, int Slot3) {
+  //Fonction that handle separetly management of vehicles in the freight elevator
+  /*
+    int Slot0: the slot of the vehicule 
+    int Slot1, int Slot2, int Slot3: the slots of the rangee
+  */
   boolean animated = false;
   if (tableau[Slot0] != null) {
     if (tableau[Slot0].typeVehicule() == 1 || tableau[Slot0].typeVehicule() == 2) {
@@ -406,6 +427,11 @@ void PutVehiculesOnMC(int Slot0, int Slot1, int Slot2, int Slot3) {
 
 boolean PutInEtage = false;
 void PutVehiculesOnEtage(int Slot1, int Slot2, int Slot3) { 
+  // take a vehicule from the MONTE-CHARGE to the ferry
+    /*
+    int Slot0: the slot of the vehicule 
+    int Slot1, int Slot2, int Slot3: the slots of the rangee
+  */
   boolean animated = false;
   if (tableau[Slot1] != null && tableau[Slot1].get_x() < 800 && PutInEtage == false) {
     tableau[Slot1].deplace_horizontal_right();

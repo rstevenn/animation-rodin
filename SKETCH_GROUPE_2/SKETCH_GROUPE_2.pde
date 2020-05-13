@@ -163,11 +163,16 @@ void draw(){
     line(i,0,i,825);
   }
 
+  // Display scenary
   Decor();
+  //display all button
   Display_button();
+  //Lunch do event
   Do_Event();
+  //display freight elevator
   MonteCharge.display();
   
+  //Sensor managment ,display every sensor according to the associated variables
   if (Capteur_monte_charge_1 == true && !(ACTION == true && (SelectEvent == 9 || SelectEvent == 10 || SelectEvent == 11)))
   {
    CapteurBFront.display_green();
@@ -182,34 +187,24 @@ void draw(){
    CapteurBBack.display_red();
   }
   
-
+  //target stage display
   Tstage.display();
+  //display all gate 
   Display_Barriere();
 
+  //create the board
   for(int i=0;i<=9;i++){
     if(tableau[i] != null){
       tableau[i].display();
     }
   }
+  //Display DecorRoof
   DecorRoof();
  
   click = false;
-  /*print("*************************\n");
-  print("Voie_arrive_1: " + Voie_arrive_1 + "\n");
-  print("Voie_arrive_2: " + Voie_arrive_2 + "\n");
-  print("Voie_de_sortie_1: " + Voie_de_sortie_1 + "\n");
-  print("Voie_de_sortie_2: " + Voie_de_sortie_2 + "\n");
-  print("Monte_charge_rangee1: " + Monte_charge_rangee1 + "\n");
-  print("Monte_charge_rangee2: " + Monte_charge_rangee2 + "\n");
-  print("Etages: " + Etages + "\n");
-  print("Barriere_voie1: " + Barriere_voie1 + "\n");
-  print("Barriere_voie2: " + Barriere_voie2 + "\n");
-  print("Barriere_etage: " + Barriere_etage + "\n");
-  print("Barriere_monte_charge: " + Barriere_monte_charge + "\n");
-  print("Borne_1: " + Borne_1 + "\n");
-  print("Borne_2: " + Borne_2 + "\n");*/
 }
 
+//Detect the pointer of the mouse
 void mouseClicked(){
   click = true;
 }

@@ -1,4 +1,5 @@
 void Decor() {
+  // draw the first layer of decor
   // routes
   fill(25);
   noStroke();

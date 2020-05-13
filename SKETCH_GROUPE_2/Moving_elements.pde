@@ -27,6 +27,7 @@ class Moving_elements {
   }
 
   Moving_elements(int newX, int newY, int newSpeed, int newWidth, int newHeight, String newText, int newColor) {
+    // Dupliacte of moving_elements with a new parameter "new color", it use for gate
     x = newX;
     y = newY;
     speed = newSpeed;

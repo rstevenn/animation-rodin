@@ -1,6 +1,8 @@
+// The machine HANDLE_BORNE_2 that handle the behavior of the terminale event
 class HANDLE_BORNE_2{
   
 	boolean guard_HANDLE_BORNE_2() {
+    // check if the condition of the event is ok
 		return (Borne_2.equals(false) && 
             !Voie_arrive_2.apply(new Integer(0)).equals(none) &&
             ((new Integer(Etages.apply(new Integer(1)) + value_vehicules.apply(Voie_arrive_2.apply(new Integer(0))))).compareTo(new Integer(6)) <= 0 &&
@@ -16,6 +18,7 @@ class HANDLE_BORNE_2{
 	}
 
 	void run_HANDLE_BORNE_2(){
+    // run and animate the event
     if (ACTION == false && SelectEvent == 6){
       if(guard_HANDLE_BORNE_2()){
         Integer Temporary_target_2_tmp = Temporary_target_2;
